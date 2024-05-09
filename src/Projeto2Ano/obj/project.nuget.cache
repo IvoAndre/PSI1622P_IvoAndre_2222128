@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PZgjTBKSVAJWJmgAxXE3mddBSQZ+x7eTY9IoNM75HPTS1Q9KMch9ceFZv93ku6RnM1D5pMLNtW0h2lSllykoWA==",
+  "dgSpecHash": "i12yncUHO62Q1Yqz8EVCgU1AYMIf+CNX3EUwaNN38bnn7+z6cee861tU0K5r4kTyzDu8MtSk84eoTsngr9TRfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2º Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Projeto2Ano\\Projeto2Ano.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\2222128\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\2222128\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\2222128\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\2222128\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
