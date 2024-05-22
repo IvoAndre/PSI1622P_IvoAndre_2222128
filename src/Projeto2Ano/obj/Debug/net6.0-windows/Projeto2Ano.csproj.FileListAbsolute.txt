@@ -62,3 +62,5 @@ C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\Projeto2Ano\obj\Debug\net6.0-windows\Projeto2Ano.pdb
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\Projeto2Ano\obj\Debug\net6.0-windows\Projeto2Ano.genruntimeconfig.cache
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\Projeto2Ano\obj\Debug\net6.0-windows\ref\Projeto2Ano.dll
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\Projeto2Ano\obj\Debug\net6.0-windows\Projeto2Ano.Definicoes.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\Projeto2Ano\obj\Debug\net6.0-windows\Projeto2Ano.ContaCriar.resources

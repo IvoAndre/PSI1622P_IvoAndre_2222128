@@ -1,13 +1,23 @@
 using Microsoft.Data.SqlClient;
+using System.Runtime.CompilerServices;
 
 namespace Projeto2Ano
 {
-    internal static class Program
+    
+    static class Program
     {
+        public static Color backcolor = SystemColors.Control;
+        public static Color forecolor = Color.Black;
+
+        public static bool darkMode = false;
+
         
 
-        private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=demosnet_2222128;Trusted_Connection=True;TrustServerCertificate=True";
 
+
+        //Base de Dados
+
+        private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Projeto 2 Ano;Trusted_Connection=True;TrustServerCertificate=True";
 
         private static SqlConnection db = new SqlConnection(_connectionString);
 
