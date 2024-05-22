@@ -2142,23 +2142,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2222128\\.nuget\\packages\\": {},
+    "C:\\Users\\Ivo Andre\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2º Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Projeto2Ano\\Projeto2Ano.csproj",
+      "projectUniqueName": "C:\\Users\\Ivo Andre\\OneDrive - Escola Digital\\Documentos\\PSI\\2º Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Projeto2Ano\\Projeto2Ano.csproj",
       "projectName": "Projeto2Ano",
-      "projectPath": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2º Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Projeto2Ano\\Projeto2Ano.csproj",
-      "packagesPath": "C:\\Users\\2222128\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2º Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Projeto2Ano\\obj\\",
+      "projectPath": "C:\\Users\\Ivo Andre\\OneDrive - Escola Digital\\Documentos\\PSI\\2º Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Projeto2Ano\\Projeto2Ano.csproj",
+      "packagesPath": "C:\\Users\\Ivo Andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ivo Andre\\OneDrive - Escola Digital\\Documentos\\PSI\\2º Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Projeto2Ano\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\2222128\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ivo Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2215,7 +2215,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

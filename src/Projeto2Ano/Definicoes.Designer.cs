@@ -33,7 +33,6 @@
             lblTheme = new Label();
             cbxTheme = new ComboBox();
             btnConfirmar = new Button();
-            btnClose = new Button();
             gbxAparencia.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,31 +87,22 @@
             btnConfirmar.TabIndex = 3;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            btnClose.Font = new Font("Segoe UI Emoji", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(285, -1);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(48, 26);
-            btnClose.TabIndex = 4;
-            btnClose.Text = "❌";
-            btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += btnClose_Click;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // Definicoes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(331, 263);
-            Controls.Add(btnClose);
             Controls.Add(btnConfirmar);
             Controls.Add(gbxAparencia);
             Controls.Add(lblTitle);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Definicoes";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Definicoes";
+            TopMost = true;
             gbxAparencia.ResumeLayout(false);
             gbxAparencia.PerformLayout();
             ResumeLayout(false);
@@ -124,7 +114,6 @@
         private Label lblTitle;
         private GroupBox gbxAparencia;
         private Button btnConfirmar;
-        private Button btnClose;
         private Label lblTheme;
         private ComboBox cbxTheme;
     }

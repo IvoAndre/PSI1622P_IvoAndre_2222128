@@ -15,8 +15,14 @@ namespace Projeto2Ano
         public Definicoes()
         {
             InitializeComponent();
-            BackColor = Program.backcolor;
-            ForeColor = Program.forecolor;
+            Program.DetectTheme(this);
+            if (BackColor != Color.White)
+            {
+                cbxTheme.SelectedIndex = 1;
+                cbxTheme.Text = "Escuro";
+            }
+
+            
         }
 
 
@@ -24,17 +30,19 @@ namespace Projeto2Ano
         {
             if (cbxTheme.SelectedIndex == -1 || cbxTheme.SelectedIndex == 0)
             {
-                Program.backcolor = SystemColors.Control;
+                Program.backcolor = Color.White;
                 Program.forecolor = Color.Black;
             }
-            else if (cbxTheme.SelectedIndex != 0)
+            else if (cbxTheme.SelectedIndex == 1)
             {
-                Program.backcolor = SystemColors.ControlDark;
+                Program.backcolor = Color.FromArgb(255, 33, 34, 33);
                 Program.forecolor = Color.White;
             }
+            Program.DetectTheme(this);
+            Refresh();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Close();
         }
