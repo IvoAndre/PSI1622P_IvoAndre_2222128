@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Projeto" id="Project_391ecc3" database="Sqlite" >
+	<schema name="Default" >
+		<table name="Table" />
+		<table name="bank_accounts" >
+			<column name="userid" type="integer" jt="4" mandatory="y" />
+			<column name="pin" type="integer" jt="4" mandatory="y" />
+			<column name="saldo" type="float" length="0" decimal="2" jt="7" mandatory="y" >
+				<defo>0.00</defo>
+			</column>
+			<column name="IBAN" type="integer" jt="4" mandatory="y" >
+				<defo>1300000000000000</defo>
+			</column>
+			<index name="Pk_bankaccounts_userid" unique="PRIMARY_KEY" >
+				<column name="userid" />
+			</index>
+			<fk name="Fk_userid" to_schema="Default" to_table="users" delete_action="cascade" update_action="cascade" >
+				<fk_column name="userid" pk="id" />
+			</fk>
+		</table>
+		<table name="bank_transactions" >
+			<column name="id" type="integer" jt="4" mandatory="y" autoincrement="y" />
+			<column name="userid" type="integer" jt="4" mandatory="y" />
+			<column name="time" type="datetime" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<column name="name" type="varchar" length="250" jt="12" mandatory="y" />
+			<column name="variation" type="float" length="0" decimal="2" jt="7" mandatory="y" />
+			<column name="finalbalance" type="float" length="0" decimal="2" jt="7" mandatory="y" />
+			<index name="Pk_banktransactions_id" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="FK_userid" to_schema="Default" to_table="bank_accounts" delete_action="cascade" update_action="cascade" >
+				<fk_column name="userid" pk="userid" />
+			</fk>
+		</table>
+		<table name="shop_products" >
+			<column name="idprod" type="integer" jt="4" mandatory="y" autoincrement="y" />
+			<column name="idcat" type="integer" jt="4" mandatory="y" />
+			<column name="catpos" type="integer" jt="4" mandatory="y" />
+			<column name="name" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="description" type="varchar" length="500" jt="12" />
+			<column name="stock" type="integer" jt="4" mandatory="y" />
+			<column name="price" type="float" length="0" decimal="2" jt="7" mandatory="y" />
+			<index name="Pk_produtos_idpr" unique="PRIMARY_KEY" >
+				<column name="idprod" />
+			</index>
+		</table>
+		<table name="users" >
+			<column name="id" type="integer" jt="4" mandatory="y" autoincrement="y" />
+			<column name="name" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="password" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="username" type="varchar" length="100" jt="12" mandatory="y" />
+			<index name="Pk_users_id" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout_20bca66" joined_routing="y" show_column_type="y" show_relation="cascade" >
+		<entity schema="Default" name="shop_products" color="FF0000" x="256" y="80" />
+		<entity schema="Default" name="users" color="FFFF4D" x="48" y="112" />
+		<entity schema="Default" name="bank_transactions" color="0000FF" x="272" y="304" />
+		<entity schema="Default" name="bank_accounts" color="0000FF" x="48" y="304" />
+		<group name="Group_Bank" color="0000FF" >
+			<entity schema="Default" name="bank_transactions" />
+			<entity schema="Default" name="bank_accounts" />
+		</group>
+		<group name="Group_Shop" color="FF0000" >
+			<entity schema="Default" name="shop_products" />
+		</group>
+		<group name="Group_General" color="FFFF4D" >
+			<entity schema="Default" name="users" />
+		</group>
+	</layout>
+</project>
