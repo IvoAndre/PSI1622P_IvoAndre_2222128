@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicial));
             lblTitle = new Label();
             btnSair = new Button();
@@ -35,7 +36,9 @@
             menuDefinicoes = new ToolStripMenuItem();
             btnCriar = new Button();
             btnEntrar = new Button();
+            menuInicialBindingSource = new BindingSource(components);
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)menuInicialBindingSource).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
@@ -57,6 +60,7 @@
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(196, 41);
             btnSair.TabIndex = 2;
+            btnSair.TabStop = false;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = true;
             btnSair.Click += btnSair_Click;
@@ -87,6 +91,7 @@
             btnCriar.Name = "btnCriar";
             btnCriar.Size = new Size(196, 41);
             btnCriar.TabIndex = 5;
+            btnCriar.TabStop = false;
             btnCriar.Text = "Criar Conta";
             btnCriar.UseVisualStyleBackColor = false;
             btnCriar.Click += btnCriar_Click;
@@ -100,9 +105,14 @@
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(196, 41);
             btnEntrar.TabIndex = 7;
+            btnEntrar.TabStop = false;
             btnEntrar.Text = "Entrar na Conta";
             btnEntrar.UseVisualStyleBackColor = true;
             btnEntrar.Click += btnEntrar_Click;
+            // 
+            // menuInicialBindingSource
+            // 
+            menuInicialBindingSource.DataSource = typeof(MenuInicial);
             // 
             // MenuInicial
             // 
@@ -120,9 +130,11 @@
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             Name = "MenuInicial";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Inicial";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)menuInicialBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,5 +148,6 @@
         private ToolStripMenuItem menuDefinicoes;
         private Button btnCriar;
         private Button btnEntrar;
+        private BindingSource menuInicialBindingSource;
     }
 }

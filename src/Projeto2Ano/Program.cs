@@ -6,18 +6,28 @@ namespace Projeto2Ano
     
     static class Program
     {
-        public static Color backcolor = SystemColors.Control;
+        public static Color backcolor = Color.White;
+
         public static Color forecolor = Color.Black;
 
-        public static bool darkMode = false;
+        public static void DetectTheme(Form form)
+        {
+            form.BackColor = backcolor;
+            form.ForeColor = forecolor;
 
-        
+            foreach (Control control in form.Controls)
+            {
+                control.BackColor = backcolor;
+                control.ForeColor = forecolor;
+            }
+            form.Refresh();
+        }
 
 
 
         //Base de Dados
 
-        private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Projeto 2 Ano;Trusted_Connection=True;TrustServerCertificate=True";
+        private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Projeto_2_Ano;Trusted_Connection=True;TrustServerCertificate=True";
 
         private static SqlConnection db = new SqlConnection(_connectionString);
 

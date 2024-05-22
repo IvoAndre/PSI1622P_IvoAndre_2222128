@@ -13,9 +13,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="ContaCriar.cs">
+    <Compile Update="Conta\ContaCriar.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Banco\" />
+    <Folder Include="Loja\" />
+    <Folder Include="Admin\" />
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
 
 </Project>
