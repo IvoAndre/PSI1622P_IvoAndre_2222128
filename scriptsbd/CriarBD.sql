@@ -102,7 +102,35 @@ GO
 USE Projeto_2_Ano
 GO
 
-/****** Object:  Table [dbo].[shop_products]    Script Date: 22/05/2024 17:37:18 ******/
+
+USE [Projeto_2_Ano]
+GO
+
+/****** Object:  Table [dbo].[shop_categories]    Script Date: 23/05/2024 09:04:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[shop_categories](
+	[name] [varchar](100) NOT NULL,
+	[id] [int] NOT NULL,
+ CONSTRAINT [Pk_shop_categories_id] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+
+USE [Projeto_2_Ano]
+GO
+
+/****** Object:  Table [dbo].[shop_products]    Script Date: 23/05/2024 09:05:41 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -123,6 +151,17 @@ CREATE TABLE [dbo].[shop_products](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+ALTER TABLE [dbo].[shop_products]  WITH CHECK ADD  CONSTRAINT [fk_idcat] FOREIGN KEY([idcat])
+REFERENCES [dbo].[shop_categories] ([id])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[shop_products] CHECK CONSTRAINT [fk_idcat]
+GO
+
+
 
 
 

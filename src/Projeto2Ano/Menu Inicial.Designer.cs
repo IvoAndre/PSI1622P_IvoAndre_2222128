@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicial));
             lblTitle = new Label();
             btnSair = new Button();
@@ -36,9 +35,7 @@
             menuDefinicoes = new ToolStripMenuItem();
             btnCriar = new Button();
             btnEntrar = new Button();
-            menuInicialBindingSource = new BindingSource(components);
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)menuInicialBindingSource).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
@@ -110,10 +107,6 @@
             btnEntrar.UseVisualStyleBackColor = true;
             btnEntrar.Click += btnEntrar_Click;
             // 
-            // menuInicialBindingSource
-            // 
-            menuInicialBindingSource.DataSource = typeof(MenuInicial);
-            // 
             // MenuInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -134,7 +127,6 @@
             Text = "Menu Inicial";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)menuInicialBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,6 +140,5 @@
         private ToolStripMenuItem menuDefinicoes;
         private Button btnCriar;
         private Button btnEntrar;
-        private BindingSource menuInicialBindingSource;
     }
 }
