@@ -1,3 +1,5 @@
+using System.Configuration;
+
 namespace Projeto2Ano
 {
     public partial class MenuInicial : Form
@@ -10,9 +12,9 @@ namespace Projeto2Ano
         {
             InitializeComponent();
             Program.DetectTheme(this);
-
+            Program.db.Open();
             KeyPreview = true;
-            KeyPress += MenuInicial_KeyPress;
+            KeyPress += MenuInicial_KeyPress; 
         }
 
         private void MenuInicial_KeyPress(object sender, KeyPressEventArgs e)
@@ -69,9 +71,9 @@ namespace Projeto2Ano
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Hide();
-            /*Form1 form1 = new Form1();
-            form1.Closed += (s, args) => Show();
-            form1.ShowDialog();*/
+            ContaEntrar contaEntrar = new ContaEntrar();
+            contaEntrar.Closed += (s, args) => Show();
+            contaEntrar.ShowDialog();
         }
 
         private void btnSair_Click(object sender, EventArgs e)

@@ -34,6 +34,13 @@
 				<fk_column name="userid" pk="userid" />
 			</fk>
 		</table>
+		<table name="shop_categories" >
+			<column name="name" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="id" type="int" jt="4" mandatory="y" />
+			<index name="Pk_shop_categories_id" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
 		<table name="shop_products" >
 			<column name="idprod" type="int" length="0" decimal="0" jt="4" mandatory="y" autoincrement="y" />
 			<column name="idcat" type="int" length="0" decimal="0" jt="4" mandatory="y" />
@@ -45,6 +52,9 @@
 			<index name="Pk_produtos_idpr" unique="PRIMARY_KEY" >
 				<column name="idprod" />
 			</index>
+			<fk name="fk_shop_products_shop_products" to_schema="Default" to_table="shop_categories" delete_action="cascade" update_action="cascade" >
+				<fk_column name="idcat" pk="id" />
+			</fk>
 		</table>
 		<table name="users" >
 			<column name="id" type="int" length="0" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -61,24 +71,52 @@
 		<entity schema="Default" name="bank_accounts" color="0000FF" x="48" y="304" />
 		<entity schema="Default" name="bank_transactions" color="0000FF" x="272" y="304" />
 		<entity schema="Default" name="shop_products" color="FF0000" x="256" y="80" />
+		<entity schema="Default" name="shop_categories" color="FF0000" x="480" y="80" />
 		<group name="Group_Bank" color="0000FF" >
 			<entity schema="Default" name="bank_transactions" />
 			<entity schema="Default" name="bank_accounts" />
 		</group>
 		<group name="Group_Shop" color="FF0000" >
 			<entity schema="Default" name="shop_products" />
+			<entity schema="Default" name="shop_categories" />
 		</group>
 		<group name="Group_General" color="FFFF4D" >
 			<entity schema="Default" name="users" />
 		</group>
+		<script name="idcat" id="Editor_3fcb115" language="SQL" >
+			<string><![CDATA[ALTER TABLE shop_products ADD idcat int NOT NULL;
+]]></string>
+		</script>
+		<script name="shop_categories" id="Editor_1fe9ce0" language="SQL" >
+			<string><![CDATA[CREATE TABLE shop_categories ( 
+	name                 varchar(100) NOT NULL    ,
+	id                   int NOT NULL    ,
+	CONSTRAINT Pk_shop_categories_id PRIMARY KEY  ( id )
+ );
+]]></string>
+		</script>
+		<script name="shop_products" id="Editor_51eee00" language="SQL" >
+			<string><![CDATA[CREATE TABLE shop_products ( 
+	idprod               int NOT NULL   IDENTITY ,
+	idcat                int NOT NULL    ,
+	catpos               int NOT NULL    ,
+	name                 varchar(100) NOT NULL    ,
+	description          varchar(500)     ,
+	stock                int NOT NULL    ,
+	price                float NOT NULL    ,
+	CONSTRAINT Pk_produtos_idpr PRIMARY KEY  ( idprod )
+ );
+
+ALTER TABLE shop_products ADD CONSTRAINT fk_shop_products_shop_products FOREIGN KEY ( idcat ) REFERENCES shop_categories( id ) ON DELETE CASCADE ON UPDATE CASCADE;
+]]></string>
+		</script>
 		<script name="users" id="Editor_2bf3ec0" language="SQL" >
 			<string><![CDATA[CREATE TABLE users ( 
 	id                   integer NOT NULL  PRIMARY KEY autoincrement ,
 	name                 varchar(100) NOT NULL    ,
 	password             varchar(100) NOT NULL    ,
 	username             varchar(100) NOT NULL    
- );
-]]></string>
+ );]]></string>
 		</script>
 	</layout>
 </project>
