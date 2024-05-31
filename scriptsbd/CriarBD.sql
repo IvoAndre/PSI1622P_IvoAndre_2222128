@@ -1,3 +1,18 @@
+/****** SCRIPT REDUNDANTE - PROGRAMA CRIA A PRÓPRIA BASE DE DADOS ******/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /****** Object:  Database [Projeto_2_Ano]    Script Date: 22/05/2024 17:40:10 ******/
 CREATE DATABASE [Projeto_2_Ano]
   

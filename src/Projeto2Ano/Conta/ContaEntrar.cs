@@ -6,47 +6,46 @@ namespace Projeto2Ano
 {
     public partial class ContaEntrar : Form
     {
-        private SqlDataReader dr;
+
         public ContaEntrar()
         {
             InitializeComponent();
             Program.DetectTheme(this);
+            lblErro.ForeColor = Color.Red;
 
             if (Program.db.State != ConnectionState.Open)
             {
                 Program.db.Open();
             }
+
+            KeyDown += ContaEntrar_KeyDown;
         }
 
-        private bool usernameExists()
+        private void ContaEntrar_KeyDown(object sender, KeyEventArgs e)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = Program.db;
-            cmd.CommandText = "SELECT username FROM users WHERE username = @username";
-            cmd.Parameters.AddWithValue("@username", tbxUsername.Text);
-
-            using (SqlDataReader dr = cmd.ExecuteReader())
+            if (e.KeyCode == Keys.Enter)
             {
-                if (dr.HasRows)
+                if (btnEntrar.Enabled)
                 {
-                        return true;
+                    btnEntrar.Select();
                 }
+                e.Handled = true;
             }
-
-            return false;
         }
 
-        private void lblErrorDisplay(string Erro)
+        
+
+        private void DisplaylblError(string Erro)
         {
             lblErro.Visible = true;
             lblErro.Text = Erro;
         }
         private void VerifyTxtbxs()
         {
-            if ( tbxUsername.Text.Length == 0 && tbxPass.Text.Length == 0 )
+            if ( tbxUsername.Text.Length == 0 || tbxPass.Text.Length == 0 )
             {
                 btnEntrar.Enabled = false;
-                lblErrorDisplay("Tem de preencher todos os campos obrigatórios. (*)");
+                DisplaylblError("Tem de preencher todos os campos obrigatórios. (*)");
             }
             else
             {
@@ -81,13 +80,13 @@ namespace Projeto2Ano
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string hash = "";
-            if (usernameExists())
+            if (!Program.IsUsernameUnique(tbxUsername.Text))
             {
                 try
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = Program.db;
-                    cmd.CommandText = "SELECT password FROM users WHERE username = @username";
+                    cmd.CommandText = "SELECT password FROM users WHERE username COLLATE Latin1_General_BIN = @username";
                     cmd.Parameters.AddWithValue("@username", tbxUsername.Text);
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
@@ -109,13 +108,12 @@ namespace Projeto2Ano
                 {
                     if (Crypt.Verify(tbxPass.Text, hash))
                     {
-                        User user = new User();
 
                         try
                         {
                             SqlCommand cmd = new SqlCommand();
                             cmd.Connection = Program.db;
-                            cmd.CommandText = "SELECT * FROM users WHERE username = @username";
+                            cmd.CommandText = "SELECT * FROM users WHERE username COLLATE Latin1_General_BIN = @username";
                             cmd.Parameters.AddWithValue("@username", tbxUsername.Text);
 
                             using (SqlDataReader dr = cmd.ExecuteReader())
@@ -124,8 +122,9 @@ namespace Projeto2Ano
                                 {
                                     while (dr.Read())
                                     {
-                                        user.Username = dr["username"].ToString();
-                                        user.Name = dr["Name"].ToString();
+                                        Program.user.ID = (int)dr["id"];
+                                        Program.user.Username = dr["username"].ToString();
+                                        Program.user.Name = dr["Name"].ToString();
                                     }
                                 }
                             }
@@ -148,11 +147,15 @@ namespace Projeto2Ano
                     }
                     else
                     {
-                        lblErrorDisplay("A palavra-passe está incorreta.");
+                        DisplaylblError("O nome de utilizador ou a palavra-passe estão incorretos.");
                     }
 
 
                 }
+            }
+            else
+            {
+                DisplaylblError("O nome de utilizador ou a palavra-passe estão incorretos.");
             }
         }
 

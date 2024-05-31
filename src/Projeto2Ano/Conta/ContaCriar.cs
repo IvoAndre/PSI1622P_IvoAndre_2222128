@@ -5,62 +5,56 @@ namespace Projeto2Ano
 {
     public partial class ContaCriar : Form
     {
-        private SqlDataReader dr;
+        
         public ContaCriar()
         {
             InitializeComponent();
             Program.DetectTheme(this);
+            lblErro.ForeColor = Color.Red;
 
             if (Program.db.State != ConnectionState.Open)
             {
                 Program.db.Open();
             }
+
+            KeyDown += ContaCriar_KeyDown;
         }
 
-        private bool IsUsernameUnique()
+        private void ContaCriar_KeyDown(object sender, KeyEventArgs e)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = Program.db;
-            cmd.CommandText = "SELECT username FROM users WHERE username = @username";
-            cmd.Parameters.AddWithValue("@username", tbxUsername.Text);
-
-            using (SqlDataReader dr = cmd.ExecuteReader())
+            if (e.KeyCode == Keys.Enter)
             {
-                
-
-                if (dr.HasRows)
+                if (btnCriar.Enabled)
                 {
-                    while (dr.Read())
-                    {
-                        return false;
-                    }
+                    btnCriar.Select();
                 }
+                e.Handled = true;
             }
-
-            return true;
         }
 
-        private void lblErrorDisplay(string Erro)
+        
+
+        private void DisplaylblError(string Erro)
         {
             lblErro.Visible = true;
             lblErro.Text = Erro;
         }
         private void VerifyTxtbxs()
         {
-            if (tbxName.Text.Length == 0 && tbxUsername.Text.Length == 0 && tbxPass.Text.Length == 0 && tbxRepPass.Text.Length == 0)
+            if (tbxName.Text.Length == 0 || tbxUsername.Text.Length == 0 || tbxPass.Text.Length == 0 || tbxRepPass.Text.Length == 0)
             {
                 btnCriar.Enabled = false;
-                lblErrorDisplay("Tem de preencher todos os campos obrigatórios. (*)");
+                DisplaylblError("Tem de preencher todos os campos obrigatórios. (*)");
             }
-            else if (!IsUsernameUnique())
+            else if (!Program.IsUsernameUnique(tbxUsername.Text))
             {
                 btnCriar.Enabled = false;
-                lblErrorDisplay("Este Nome de Utilizador já está a ser utilizado!");
+                DisplaylblError("Este Nome de Utilizador já está a ser utilizado!");
             }
             else if (tbxPass.Text != tbxRepPass.Text)
             {
                 btnCriar.Enabled = false;
-                lblErrorDisplay("As palavras-passe devem ser iguais.");
+                DisplaylblError("As palavras-passe devem ser iguais.");
             }
             else
             {
