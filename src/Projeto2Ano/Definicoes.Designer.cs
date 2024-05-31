@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Definicoes));
             lblTitle = new Label();
             gbxAparencia = new GroupBox();
             lblTheme = new Label();
             cbxTheme = new ComboBox();
             btnConfirmar = new Button();
+            btnReset = new Button();
             gbxAparencia.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(95, 212);
+            btnConfirmar.Location = new Point(179, 212);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(140, 39);
             btnConfirmar.TabIndex = 3;
@@ -89,19 +91,30 @@
             btnConfirmar.UseVisualStyleBackColor = true;
             btnConfirmar.Click += btnConfirmar_Click;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(12, 212);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(140, 39);
+            btnReset.TabIndex = 4;
+            btnReset.Text = "Redefinir Predefinições";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // Definicoes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(331, 263);
+            Controls.Add(btnReset);
             Controls.Add(btnConfirmar);
             Controls.Add(gbxAparencia);
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Definicoes";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Definicoes";
+            Text = "Definições";
             TopMost = true;
             gbxAparencia.ResumeLayout(false);
             gbxAparencia.PerformLayout();
@@ -116,5 +129,6 @@
         private Button btnConfirmar;
         private Label lblTheme;
         private ComboBox cbxTheme;
+        private Button btnReset;
     }
 }

@@ -51,6 +51,7 @@
             // 
             // btnEntrar
             // 
+            btnEntrar.Enabled = false;
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Location = new Point(92, 191);
             btnEntrar.Margin = new Padding(50000);
@@ -123,6 +124,7 @@
             // 
             // ContaEntrar
             // 
+            AcceptButton = btnEntrar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
@@ -137,13 +139,12 @@
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ContaEntrar";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Conta";
-            TopMost = true;
             ResumeLayout(false);
             PerformLayout();
         }

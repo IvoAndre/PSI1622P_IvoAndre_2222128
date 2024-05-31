@@ -120,6 +120,7 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             Name = "MenuInicial";
@@ -135,7 +136,6 @@
 
         private Label lblTitle;
         private Button btnSair;
-        private Button button2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuDefinicoes;
         private Button btnCriar;

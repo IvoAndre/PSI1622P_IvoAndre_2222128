@@ -30,45 +30,47 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loading));
-            pBar = new ProgressBar();
             Timer = new System.Windows.Forms.Timer(components);
+            pBar = new ProgressBar();
             SuspendLayout();
-            // 
-            // pBar
-            // 
-            pBar.Location = new Point(12, 12);
-            pBar.Name = "pBar";
-            pBar.Size = new Size(352, 23);
-            pBar.Style = ProgressBarStyle.Continuous;
-            pBar.TabIndex = 0;
             // 
             // Timer
             // 
+            Timer.Enabled = true;
             Timer.Interval = 1000;
             Timer.Tick += Timer_Tick;
+            // 
+            // pBar
+            // 
+            pBar.Location = new Point(8, 8);
+            pBar.Margin = new Padding(10);
+            pBar.Name = "pBar";
+            pBar.Size = new Size(300, 25);
+            pBar.Step = 20;
+            pBar.Style = ProgressBarStyle.Continuous;
+            pBar.TabIndex = 4;
             // 
             // Loading
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(376, 45);
+            ClientSize = new Size(316, 41);
             ControlBox = false;
             Controls.Add(pBar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Loading";
-            ShowIcon = false;
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "A Carregar...";
             ResumeLayout(false);
         }
 
         #endregion
-        private Button button2;
-        private ProgressBar pBar;
         private System.Windows.Forms.Timer Timer;
+        private ProgressBar pBar;
     }
 }

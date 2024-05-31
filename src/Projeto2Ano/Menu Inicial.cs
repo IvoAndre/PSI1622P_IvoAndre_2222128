@@ -1,10 +1,14 @@
+using Microsoft.Data.SqlClient;
+using Microsoft.VisualBasic.ApplicationServices;
 using System.Configuration;
+using System.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Projeto2Ano
 {
     public partial class MenuInicial : Form
     {
-        private const string AdminCode = "WWSSADADBA"; // Konami code sequence
+        private const string AdminCode = "ADMIN";//"WWSSADADBA"; // Konami code sequence
         private int currentKeyIndex = 0; // Index to keep track of the current key in the Konami code sequence
 
 
@@ -12,9 +16,33 @@ namespace Projeto2Ano
         {
             InitializeComponent();
             Program.DetectTheme(this);
-            Program.db.Open();
-            KeyPreview = true;
+            if (Program.db.State != ConnectionState.Open)
+            {
+                Program.db.Open();
+            }
+            VUsers();
+
+
+            Program.adminMode = false;
             KeyPress += MenuInicial_KeyPress; 
+        }
+        private void AdminMode()
+        {
+                        
+            Program.user.ID = -1;
+            Program.user.Username = "Admin";
+            Program.user.Name = "Administrador";
+            Program.adminMode = true;
+            Hide();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Closed += (s, args) => 
+            {
+                Program.DetectTheme(this);
+                Program.adminMode = false;
+                Show(); 
+                
+            };
+            menuPrincipal.ShowDialog();
         }
 
         private void MenuInicial_KeyPress(object sender, KeyPressEventArgs e)
@@ -31,7 +59,8 @@ namespace Projeto2Ano
 
                 if (currentKeyIndex == AdminCode.Length)
                 {
-                    lblTitle.Text = "Parabéns!";
+                    AdminMode();
+                    //lblTitle.Text = "Parabéns!";
                     currentKeyIndex = 0; 
                 }
                 else
@@ -50,12 +79,12 @@ namespace Projeto2Ano
 
         private void menuDefinicoes_Click(object sender, EventArgs e)
         {
+            Hide();
             Definicoes definicoes = new Definicoes();
             definicoes.Closed += (s, args) =>
             {
                 Program.DetectTheme(this);
-                
-                Focus();
+                Show();
             };
             definicoes.ShowDialog();
         }
@@ -64,7 +93,11 @@ namespace Projeto2Ano
         {
             Hide();
             ContaCriar contaCriar = new ContaCriar();
-            contaCriar.Closed += (s, args) => Show();
+            contaCriar.Closed += (s, args) =>
+            {
+                VUsers();
+                Show();
+            };
             contaCriar.ShowDialog();
         }
 
@@ -72,7 +105,11 @@ namespace Projeto2Ano
         {
             Hide();
             ContaEntrar contaEntrar = new ContaEntrar();
-            contaEntrar.Closed += (s, args) => Show();
+            contaEntrar.Closed += (s, args) => 
+            {
+                VUsers();
+                Show();
+            };
             contaEntrar.ShowDialog();
         }
 
@@ -80,5 +117,22 @@ namespace Projeto2Ano
         {
             Close();
         }
+
+        private void VUsers()
+        {
+            if (Program.VerifyUsers())
+            {
+                btnEntrar.Enabled = true;
+                lblTitle.Text = "Selecione uma opção:";
+            }
+            else
+            {
+                btnEntrar.Enabled = false;
+                lblTitle.Text = "Crie uma conta:";
+            }
+        }
+
+
+        
     }
 }

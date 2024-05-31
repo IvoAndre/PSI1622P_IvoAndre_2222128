@@ -55,6 +55,7 @@
             // 
             // btnCriar
             // 
+            btnCriar.Enabled = false;
             btnCriar.FlatStyle = FlatStyle.Flat;
             btnCriar.Location = new Point(92, 306);
             btnCriar.Margin = new Padding(50000);
@@ -164,6 +165,7 @@
             // 
             // ContaCriar
             // 
+            AcceptButton = btnCriar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
@@ -182,13 +184,12 @@
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ContaCriar";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Conta";
-            TopMost = true;
             ResumeLayout(false);
             PerformLayout();
         }
