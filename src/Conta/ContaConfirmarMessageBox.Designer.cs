@@ -1,4 +1,4 @@
-﻿namespace Projeto2Ano.Conta
+﻿namespace Projeto2Ano
 {
     partial class ContaConfirmarMessageBox
     {

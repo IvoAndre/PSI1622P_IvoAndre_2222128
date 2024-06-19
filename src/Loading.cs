@@ -1,5 +1,3 @@
-using System.Configuration;
-
 namespace Projeto2Ano
 {
     public partial class Loading : Form

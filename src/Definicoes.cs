@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Projeto2Ano
+﻿namespace Projeto2Ano
 {
     public partial class Definicoes : Form
     {
@@ -55,16 +45,20 @@ namespace Projeto2Ano
             {
                 case 0:
                     Program.backcolor = Color.White;
+                    Program.altBackcolor = Color.LightGray;
                     Program.forecolor = Color.Black;
+                    
                     File.WriteAllText(Program.themeFilePath, cbxTheme.Text);
                     break;
                 case 1:
                     Program.backcolor = Color.FromArgb(255, 33, 34, 33);
+                    Program.altBackcolor = Color.FromArgb(255, 38, 39, 38);
                     Program.forecolor = Color.White;
                     File.WriteAllText(Program.themeFilePath, cbxTheme.Text);
                     break;
                 default:
                     Program.backcolor = Color.White;
+                    Program.altBackcolor = Color.LightGray;
                     Program.forecolor = Color.Black;
                     break;
             }
@@ -82,6 +76,7 @@ namespace Projeto2Ano
             Directory.Delete(Program.configFolder, true);
             Program.backcolor = Color.White;
             Program.forecolor = Color.Black;
+            Program.altBackcolor = Color.LightGray;
             Close();
         }
     }

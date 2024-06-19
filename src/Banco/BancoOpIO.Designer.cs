@@ -42,7 +42,7 @@
             // 
             lblErro.AutoSize = true;
             lblErro.ForeColor = Color.Red;
-            lblErro.Location = new Point(66, 137);
+            lblErro.Location = new Point(66, 158);
             lblErro.Name = "lblErro";
             lblErro.Size = new Size(31, 15);
             lblErro.TabIndex = 41;
@@ -60,6 +60,7 @@
             btnReturn.TabIndex = 39;
             btnReturn.Text = "Cancelar";
             btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
             // 
             // btnOption
             // 
@@ -78,18 +79,18 @@
             // 
             lblTitle.Dock = DockStyle.Top;
             lblTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitle.Location = new Point(0, 23);
+            lblTitle.Location = new Point(0, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(474, 64);
+            lblTitle.Size = new Size(474, 85);
             lblTitle.TabIndex = 40;
             lblTitle.Text = "Title";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSaldo
             // 
-            lblSaldo.Dock = DockStyle.Top;
+            lblSaldo.Dock = DockStyle.Bottom;
             lblSaldo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSaldo.Location = new Point(0, 0);
+            lblSaldo.Location = new Point(0, 229);
             lblSaldo.Name = "lblSaldo";
             lblSaldo.Size = new Size(474, 23);
             lblSaldo.TabIndex = 42;
@@ -98,20 +99,20 @@
             // lbltbxQuantia
             // 
             lbltbxQuantia.Dock = DockStyle.Top;
-            lbltbxQuantia.Location = new Point(0, 87);
+            lbltbxQuantia.Location = new Point(0, 85);
             lbltbxQuantia.Name = "lbltbxQuantia";
-            lbltbxQuantia.Size = new Size(474, 21);
+            lbltbxQuantia.Size = new Size(474, 44);
             lbltbxQuantia.TabIndex = 45;
             lbltbxQuantia.Text = "Quantia a Operação*";
             lbltbxQuantia.TextAlign = ContentAlignment.BottomCenter;
             // 
             // tbxQuantia
             // 
-            tbxQuantia.Location = new Point(66, 111);
+            tbxQuantia.Location = new Point(66, 132);
             tbxQuantia.Name = "tbxQuantia";
             tbxQuantia.PlaceholderText = "____ , __";
             tbxQuantia.Size = new Size(342, 23);
-            tbxQuantia.TabIndex = 46;
+            tbxQuantia.TabIndex = 1;
             tbxQuantia.TextAlign = HorizontalAlignment.Center;
             tbxQuantia.TextChanged += tbxQuantia_TextChanged;
             tbxQuantia.KeyPress += tbxQuantia_KeyPress;
@@ -122,7 +123,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnReturn;
-            ClientSize = new Size(474, 244);
+            ClientSize = new Size(474, 252);
             Controls.Add(tbxQuantia);
             Controls.Add(lbltbxQuantia);
             Controls.Add(lblErro);

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Banco\BancoAdmin.cs">
+    <Compile Update="Admin\BancoAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Banco\BancoInicial.cs">
@@ -13,10 +13,13 @@
     <Compile Update="Conta\ContaConfirmarMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Conta\ContaDefinicoesAdmin.cs">
+    <Compile Update="Admin\ContaDefinicoesAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Definicoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Loja\LojaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Menu Inicial.cs">

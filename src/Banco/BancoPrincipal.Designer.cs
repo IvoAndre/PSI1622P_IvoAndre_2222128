@@ -38,6 +38,7 @@
             btnTransactions = new Button();
             btnWithdraw = new Button();
             btnAlterarPin = new Button();
+            lblSaldo = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -152,12 +153,23 @@
             btnAlterarPin.UseVisualStyleBackColor = true;
             btnAlterarPin.Click += btnAlterarPin_Click;
             // 
+            // lblSaldo
+            // 
+            lblSaldo.Dock = DockStyle.Bottom;
+            lblSaldo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSaldo.Location = new Point(0, 430);
+            lblSaldo.Name = "lblSaldo";
+            lblSaldo.Size = new Size(594, 23);
+            lblSaldo.TabIndex = 43;
+            lblSaldo.Text = "Saldo Atual: {Program.user.Saldo}";
+            // 
             // BancoPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnSair;
-            ClientSize = new Size(594, 434);
+            ClientSize = new Size(594, 453);
+            Controls.Add(lblSaldo);
             Controls.Add(btnAlterarPin);
             Controls.Add(btnWithdraw);
             Controls.Add(btnTransactions);
@@ -188,5 +200,6 @@
         private Button btnTransactions;
         private Button btnWithdraw;
         private Button btnAlterarPin;
+        private Label lblSaldo;
     }
 }
