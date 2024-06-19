@@ -1,8 +1,5 @@
 using Microsoft.Data.SqlClient;
-using Projeto2Ano.Conta;
-using System;
 using System.Data;
-using System.Text;
 
 namespace Projeto2Ano
 {

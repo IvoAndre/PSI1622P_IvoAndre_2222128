@@ -1,4 +1,3 @@
-using System.Configuration;
 using System.Data;
 
 namespace Projeto2Ano
@@ -74,9 +73,25 @@ namespace Projeto2Ano
         private void btnShop_Click(object sender, EventArgs e)
         {
             Hide();
-            ContaEntrar contaEntrar = new ContaEntrar();
-            contaEntrar.Closed += (s, args) => Show();
-            contaEntrar.ShowDialog();
+            if (Program.adminMode)
+            {
+                LojaAdmin lojaAdmin = new LojaAdmin();
+                lojaAdmin.FormClosed += (s, args) => Show();
+                lojaAdmin.ShowDialog();
+            }
+            else
+            {
+                try
+                {
+                    LojaPrincipal lojaPrincipal = new LojaPrincipal();
+                    lojaPrincipal.Closed += (s, args) => Show();
+                    lojaPrincipal.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    Application.Exit();
+                }
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)

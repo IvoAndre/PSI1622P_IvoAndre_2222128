@@ -1,8 +1,4 @@
-using Microsoft.Data.SqlClient;
-using Microsoft.VisualBasic.ApplicationServices;
-using System.Configuration;
 using System.Data;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Projeto2Ano
 {
@@ -95,6 +91,7 @@ namespace Projeto2Ano
             ContaCriar contaCriar = new ContaCriar();
             contaCriar.Closed += (s, args) =>
             {
+                Program.DetectTheme(this);
                 VUsers();
                 Show();
             };
@@ -107,6 +104,7 @@ namespace Projeto2Ano
             ContaEntrar contaEntrar = new ContaEntrar();
             contaEntrar.Closed += (s, args) => 
             {
+                Program.DetectTheme(this);
                 VUsers();
                 Show();
             };

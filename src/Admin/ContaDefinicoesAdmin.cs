@@ -1,15 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
-using Microsoft.IdentityModel.Tokens;
-using Projeto2Ano.Conta;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Projeto2Ano
 {
@@ -21,7 +11,6 @@ namespace Projeto2Ano
         {
             InitializeComponent();
             Program.DetectTheme(this);
-            Program.DetectTheme(pDefinicoes);
             if (Program.db.State != ConnectionState.Open)
             {
                 Program.db.Open();

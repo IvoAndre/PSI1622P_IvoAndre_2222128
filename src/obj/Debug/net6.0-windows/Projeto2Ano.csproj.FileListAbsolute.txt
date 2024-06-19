@@ -209,7 +209,6 @@ C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PS
 C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoOpIO.resources
 C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoPIN.resources
 C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoPrincipal.resources
-C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.Conta.ContaConfirmarMessageBox.resources
 C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaCriar.resources
 C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaDefinicoes.resources
 C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaDefinicoesAdmin.resources
@@ -288,7 +287,6 @@ C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoOpIO.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoPIN.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoPrincipal.resources
-C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.Conta.ContaConfirmarMessageBox.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaCriar.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaDefinicoes.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaDefinicoesAdmin.resources
@@ -303,10 +301,26 @@ C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.AssemblyInfoInputs.cache
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.AssemblyInfo.cs
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.csproj.CoreCompileInputs.cache
-C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.sourcelink.json
-C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2.C3167F93.Up2Date
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.dll
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\refint\Projeto2Ano.dll
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.pdb
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.genruntimeconfig.cache
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\ref\Projeto2Ano.dll
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoTransferencia.resources
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoTransacoes.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoTransacoes.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.BancoTransferencia.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaConfirmarMessageBox.resources
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.ContaConfirmarMessageBox.resources
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaCarrinho.resources
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPagamento.resources
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPrincipal.resources
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\Config\noimage.png
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\noimage.png
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaCarrinho.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPagamento.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPrincipal.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaAdmin.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.sourcelink.json
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2.C3167F93.Up2Date
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPagamentoDinheiro.resources

@@ -35,14 +35,16 @@
             menuDefinicoes = new ToolStripMenuItem();
             btnCriar = new Button();
             btnEntrar = new Button();
+            pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
             // 
             lblTitle.Anchor = AnchorStyles.None;
             lblTitle.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitle.Location = new Point(0, 50);
+            lblTitle.Location = new Point(0, 165);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(384, 25);
             lblTitle.TabIndex = 0;
@@ -53,7 +55,7 @@
             // 
             btnSair.Anchor = AnchorStyles.None;
             btnSair.FlatStyle = FlatStyle.Flat;
-            btnSair.Location = new Point(94, 225);
+            btnSair.Location = new Point(94, 340);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(196, 41);
             btnSair.TabIndex = 2;
@@ -83,7 +85,7 @@
             // 
             btnCriar.Anchor = AnchorStyles.None;
             btnCriar.FlatStyle = FlatStyle.Flat;
-            btnCriar.Location = new Point(94, 105);
+            btnCriar.Location = new Point(94, 220);
             btnCriar.Margin = new Padding(50000);
             btnCriar.Name = "btnCriar";
             btnCriar.Size = new Size(196, 41);
@@ -97,7 +99,7 @@
             // 
             btnEntrar.Anchor = AnchorStyles.None;
             btnEntrar.FlatStyle = FlatStyle.Flat;
-            btnEntrar.Location = new Point(94, 164);
+            btnEntrar.Location = new Point(94, 279);
             btnEntrar.Margin = new Padding(50000);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(196, 41);
@@ -107,12 +109,25 @@
             btnEntrar.UseVisualStyleBackColor = true;
             btnEntrar.Click += btnEntrar_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Dock = DockStyle.Top;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 24);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(384, 137);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            // 
             // MenuInicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(384, 311);
+            ClientSize = new Size(384, 422);
+            Controls.Add(pictureBox1);
             Controls.Add(btnEntrar);
             Controls.Add(btnCriar);
             Controls.Add(btnSair);
@@ -128,6 +143,7 @@
             Text = "Menu Inicial";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +156,6 @@
         private ToolStripMenuItem menuDefinicoes;
         private Button btnCriar;
         private Button btnEntrar;
+        private PictureBox pictureBox1;
     }
 }
