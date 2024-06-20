@@ -13,8 +13,16 @@ namespace Projeto2Ano
             {
                 Program.db.Open();
             }
-            VerifyPayment();
 
+            if(Program.VerifyBankAccount())
+            {
+                btnPayBank.Enabled = true;
+            }
+            else
+            {
+                btnPayBank.Enabled = false;
+            }
+            VerifyPayment();
 
         }
 
@@ -22,11 +30,11 @@ namespace Projeto2Ano
         {
             if (Program.loja.paidQuantityMoney + Program.loja.paidQuantityBank == 0)
             {
-                lblTotal.Text = $"Total a Pagar:\n{Program.UpdateTotal()}€";
+                lblTotal.Text = $"Total a Pagar:\n{Program.UpdateTotal().ToString("0.00")}€";
             }
             else
             {
-                lblTotal.Text = $"Restante a Pagar: {Program.UpdateTotal()}€ \nTotal Pago: {Program.loja.paidQuantityMoney + Program.loja.paidQuantityBank}€";
+                lblTotal.Text = $"Restante a Pagar: {Program.UpdateTotal().ToString("0.00")}€ \nTotal Pago: {Program.loja.paidQuantityMoney + Program.loja.paidQuantityBank}€";
             }
             if (Program.UpdateTotal() == 0)
             {
@@ -36,7 +44,7 @@ namespace Projeto2Ano
             }
             else if (Program.UpdateTotal() < 0)
             {
-                MessageBox.Show($"Obrigado por utilizar a loja!\nVolte Sempre!\n\nTroco Recebido: {Program.UpdateTotal() * -1}", "Conclusão da Compra", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show($"Obrigado por utilizar a loja!\nVolte Sempre!\n\nTroco Recebido: {(Program.UpdateTotal() * -1).ToString("0.00")}", "Conclusão da Compra", MessageBoxButtons.OK, MessageBoxIcon.None);
                 this.DialogResult = DialogResult.OK;
                 Close();
             }
@@ -77,6 +85,10 @@ namespace Projeto2Ano
                     MessageBox.Show($"Quantia retornada: {Program.loja.paidQuantityBank + Program.loja.paidQuantityMoney}","Informação",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     Close();
                 }
+            }
+            else
+            {
+                Close();
             }
         }
     }

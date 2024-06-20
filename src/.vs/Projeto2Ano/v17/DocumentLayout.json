@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\loja\\lojacarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:loja\\lojacarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\loja\\lojapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:loja\\lojapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\admin\\lojaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:admin\\lojaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\loja\\lojaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:loja\\lojaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\menu principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:menu principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\admin\\lojaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:admin\\lojaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\admin\\bancoadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,14 +79,6 @@
       "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:conta\\contaentrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\loja\\lojacarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:loja\\lojacarrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\loja\\lojapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:loja\\lojapagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\loja\\lojapagamentodinheiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:loja\\lojapagamentodinheiro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -89,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\menu inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:menu inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|c:\\users\\2222128\\onedrive - escola digital\\documentos\\psi\\2\u00BA ano\\modulo 16\\psi1622p_ivoandre_2222128\\src\\menu principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F2152D-1B91-4563-ABF4-D4742826775C}|Projeto2Ano.csproj|solutionrelative:menu principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "BancoAdmin.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Admin\\BancoAdmin.cs",
               "RelativeDocumentMoniker": "Admin\\BancoAdmin.cs",
@@ -122,11 +122,12 @@
               "RelativeToolTip": "Admin\\BancoAdmin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:51.178Z"
+              "WhenOpened": "2024-06-19T10:25:51.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ContaDefinicoesAdmin.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Admin\\ContaDefinicoesAdmin.cs",
               "RelativeDocumentMoniker": "Admin\\ContaDefinicoesAdmin.cs",
@@ -134,11 +135,12 @@
               "RelativeToolTip": "Admin\\ContaDefinicoesAdmin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:50.554Z"
+              "WhenOpened": "2024-06-19T10:25:50.554Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "LojaAdmin.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Admin\\LojaAdmin.cs",
               "RelativeDocumentMoniker": "Admin\\LojaAdmin.cs",
@@ -151,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "BancoConfirmar.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Banco\\BancoConfirmar.cs",
               "RelativeDocumentMoniker": "Banco\\BancoConfirmar.cs",
@@ -159,11 +161,12 @@
               "RelativeToolTip": "Banco\\BancoConfirmar.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:47.117Z"
+              "WhenOpened": "2024-06-19T10:25:47.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "BancoInicial.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Banco\\BancoInicial.cs",
               "RelativeDocumentMoniker": "Banco\\BancoInicial.cs",
@@ -171,11 +174,12 @@
               "RelativeToolTip": "Banco\\BancoInicial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:46.534Z"
+              "WhenOpened": "2024-06-19T10:25:46.534Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "BancoOpIO.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Banco\\BancoOpIO.cs",
               "RelativeDocumentMoniker": "Banco\\BancoOpIO.cs",
@@ -183,11 +187,12 @@
               "RelativeToolTip": "Banco\\BancoOpIO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:45.942Z"
+              "WhenOpened": "2024-06-19T10:25:45.942Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "BancoPIN.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Banco\\BancoPIN.cs",
               "RelativeDocumentMoniker": "Banco\\BancoPIN.cs",
@@ -195,11 +200,12 @@
               "RelativeToolTip": "Banco\\BancoPIN.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:45.342Z"
+              "WhenOpened": "2024-06-19T10:25:45.342Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "BancoPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Banco\\BancoPrincipal.cs",
               "RelativeDocumentMoniker": "Banco\\BancoPrincipal.cs",
@@ -207,11 +213,12 @@
               "RelativeToolTip": "Banco\\BancoPrincipal.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:44.635Z"
+              "WhenOpened": "2024-06-19T10:25:44.635Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "BancoTransacoes.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Banco\\BancoTransacoes.cs",
               "RelativeDocumentMoniker": "Banco\\BancoTransacoes.cs",
@@ -219,11 +226,12 @@
               "RelativeToolTip": "Banco\\BancoTransacoes.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:43.963Z"
+              "WhenOpened": "2024-06-19T10:25:43.963Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "BancoTransferencia.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Banco\\BancoTransferencia.cs",
               "RelativeDocumentMoniker": "Banco\\BancoTransferencia.cs",
@@ -231,11 +239,12 @@
               "RelativeToolTip": "Banco\\BancoTransferencia.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:43.214Z"
+              "WhenOpened": "2024-06-19T10:25:43.214Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ContaConfirmarMessageBox.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Conta\\ContaConfirmarMessageBox.cs",
               "RelativeDocumentMoniker": "Conta\\ContaConfirmarMessageBox.cs",
@@ -243,11 +252,12 @@
               "RelativeToolTip": "Conta\\ContaConfirmarMessageBox.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:41.113Z"
+              "WhenOpened": "2024-06-19T10:25:41.113Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ContaCriar.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Conta\\ContaCriar.cs",
               "RelativeDocumentMoniker": "Conta\\ContaCriar.cs",
@@ -255,11 +265,12 @@
               "RelativeToolTip": "Conta\\ContaCriar.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:39.629Z"
+              "WhenOpened": "2024-06-19T10:25:39.629Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ContaDefinicoes.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Conta\\ContaDefinicoes.cs",
               "RelativeDocumentMoniker": "Conta\\ContaDefinicoes.cs",
@@ -267,11 +278,12 @@
               "RelativeToolTip": "Conta\\ContaDefinicoes.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:38.901Z"
+              "WhenOpened": "2024-06-19T10:25:38.901Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ContaEntrar.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Conta\\ContaEntrar.cs",
               "RelativeDocumentMoniker": "Conta\\ContaEntrar.cs",
@@ -279,35 +291,38 @@
               "RelativeToolTip": "Conta\\ContaEntrar.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:38.065Z"
+              "WhenOpened": "2024-06-19T10:25:38.065Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 0,
               "Title": "LojaCarrinho.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loja\\LojaCarrinho.cs",
               "RelativeDocumentMoniker": "Loja\\LojaCarrinho.cs",
               "ToolTip": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loja\\LojaCarrinho.cs",
               "RelativeToolTip": "Loja\\LojaCarrinho.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAADYBAAAAAAAAAAAuwDgBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:36.349Z"
+              "WhenOpened": "2024-06-19T10:25:36.349Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 1,
               "Title": "LojaPagamento.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loja\\LojaPagamento.cs",
               "RelativeDocumentMoniker": "Loja\\LojaPagamento.cs",
               "ToolTip": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loja\\LojaPagamento.cs",
               "RelativeToolTip": "Loja\\LojaPagamento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAwwDAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:34.785Z"
+              "WhenOpened": "2024-06-19T10:25:34.785Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "LojaPagamentoDinheiro.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loja\\LojaPagamentoDinheiro.cs",
               "RelativeDocumentMoniker": "Loja\\LojaPagamentoDinheiro.cs",
@@ -315,23 +330,25 @@
               "RelativeToolTip": "Loja\\LojaPagamentoDinheiro.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:32.647Z"
+              "WhenOpened": "2024-06-19T10:25:32.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LojaPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loja\\LojaPrincipal.cs",
               "RelativeDocumentMoniker": "Loja\\LojaPrincipal.cs",
               "ToolTip": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loja\\LojaPrincipal.cs",
               "RelativeToolTip": "Loja\\LojaPrincipal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAfAAAA",
+              "ViewState": "AQIAAN4AAAAAAAAAAAAiwOwAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:30.942Z"
+              "WhenOpened": "2024-06-19T10:25:30.942Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Definicoes.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Definicoes.cs",
               "RelativeDocumentMoniker": "Definicoes.cs",
@@ -339,11 +356,12 @@
               "RelativeToolTip": "Definicoes.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:25.959Z"
+              "WhenOpened": "2024-06-19T10:25:25.959Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Loading.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Loading.cs",
               "RelativeDocumentMoniker": "Loading.cs",
@@ -351,11 +369,12 @@
               "RelativeToolTip": "Loading.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:25.28Z"
+              "WhenOpened": "2024-06-19T10:25:25.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Menu Inicial.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Menu Inicial.cs",
               "RelativeDocumentMoniker": "Menu Inicial.cs",
@@ -363,29 +382,31 @@
               "RelativeToolTip": "Menu Inicial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:24.66Z"
+              "WhenOpened": "2024-06-19T10:25:24.66Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 4,
               "Title": "Menu Principal.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Menu Principal.cs",
               "RelativeDocumentMoniker": "Menu Principal.cs",
               "ToolTip": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Menu Principal.cs",
               "RelativeToolTip": "Menu Principal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAmwDEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:25:23.637Z"
+              "WhenOpened": "2024-06-19T10:25:23.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\2222128\\OneDrive - Escola Digital\\Documentos\\PSI\\2\u00BA Ano\\Modulo 16\\PSI1622P_IvoAndre_2222128\\src\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAOwBAAAAAAAAAAAIwAcCAAAWAAAA",
+              "ViewState": "AQIAAA4BAAAAAAAAAAAmwCwBAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T10:25:13.861Z",
               "EditorCaption": ""

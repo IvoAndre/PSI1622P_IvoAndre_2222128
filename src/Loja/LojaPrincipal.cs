@@ -171,7 +171,7 @@ namespace Projeto2Ano
         {
             Panel productPanel = new Panel
             {
-                Width = 360,
+                Width = 760,
                 Height = 200,
                 Padding = new Padding(0,10,0,10),
                 Margin = new Padding(10),
@@ -201,7 +201,7 @@ namespace Projeto2Ano
                 Text = description.Length > 150 ? description.Substring(0, 150) + "..." : description,
                 Font = new Font("Segoe UI", 10),
                 Location = new Point(130, 30),
-                Size = new Size(230, 80),
+                Size = new Size(500, 80),
                 AutoEllipsis = true
             };
             productPanel.Controls.Add(labelDescription);
@@ -234,7 +234,7 @@ namespace Projeto2Ano
                 Minimum = 0,
                 Increment = 1,
                 Tag = new Tuple<int, int>(categoryId, productId),
-                Location = new Point(300, 130),
+                Location = new Point(690, 130),
                 DecimalPlaces = 0,
                 Font = new Font("Segoe UI",15, FontStyle.Bold),
                 Width = 60,

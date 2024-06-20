@@ -53,6 +53,7 @@ namespace Projeto2Ano
                 contaDefinicoes.ShowDialog();
                 if (contaDefinicoes.DialogResult == DialogResult.OK)
                 {
+                    lblTitle.Text = $"Bem Vindo {Program.user.Name}\nSelecione um local:\n";
                     Show();
                 }
                 else if (contaDefinicoes.DialogResult == DialogResult.Abort)
