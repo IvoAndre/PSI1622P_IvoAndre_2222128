@@ -308,11 +308,36 @@ namespace Projeto2Ano
         {
             LojaPagamento lojaPagamento = new LojaPagamento();
             lojaPagamento.ShowDialog();
-            if(lojaPagamento.DialogResult == DialogResult.OK)
+
+            if (lojaPagamento.DialogResult == DialogResult.OK)
             {
+                foreach (var category in Program.loja.ProductQuantity)
+                {
+                    foreach (var product in category.Value)
+                    {
+                        int productId = product.Key;
+                        int quantity = product.Value;
+
+                        UpdateStockInDatabase(productId, quantity);
+                    }
+                }
+
                 this.DialogResult = DialogResult.OK;
                 Close();
             }
         }
+
+        private void UpdateStockInDatabase(int productId, int quantity)
+        {
+            string sqlUpdate = "UPDATE shop_products SET stock = stock - @Quantity WHERE idprod = @ProductId";
+
+            using (SqlCommand command = new SqlCommand(sqlUpdate, Program.db))
+            {
+                command.Parameters.AddWithValue("@Quantity", quantity);
+                command.Parameters.AddWithValue("@ProductId", productId);
+                command.ExecuteNonQuery();
+            }
+        }
+
     }
 }
