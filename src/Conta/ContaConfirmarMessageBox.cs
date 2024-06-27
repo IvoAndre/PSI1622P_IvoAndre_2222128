@@ -2,6 +2,9 @@
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form serve de confirmação para operações com inserção da palavra-passe para utilizadores e sem palavra-passe para administradores
+    /// </summary>
     public partial class ContaConfirmarMessageBox : Form
     {
         public ContaConfirmarMessageBox()
@@ -15,23 +18,12 @@ namespace Projeto2Ano
                 chkShowPass.Visible = false;
                 lblTitle.Text = "Esta operação requer a sua confirmação:";
             }
-            KeyDown += ContaConfirmarMessageBox_KeyDown;
         }
-
-        private void ContaConfirmarMessageBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (btnConfirm.Enabled)
-                {
-                    btnConfirm.Select();
-                }
-                e.Handled = true;
-            }
-        }
-
-        
-
+        /// <summary>
+        /// Verifica a palavra-passe e devolve Continue
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             if (Program.adminMode)
@@ -87,12 +79,22 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Fecha o form e devolve Cancel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
         }
 
+        /// <summary>
+        /// Alterna a visibilidade da palavra-passe
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass.Checked)

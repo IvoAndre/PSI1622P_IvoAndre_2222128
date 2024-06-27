@@ -69,6 +69,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "A Carregar...";
             ResumeLayout(false);
+            KeyDown += Loading_KeyDown;
         }
 
         #endregion

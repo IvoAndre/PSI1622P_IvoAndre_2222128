@@ -3,6 +3,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form permite ao utilizador transferir fundos para outras contas bancárias
+    /// </summary>
     public partial class BancoTransferencia : Form
     {
         private string userIBAN;
@@ -17,7 +20,7 @@ namespace Projeto2Ano
             {
                 Program.db.Open();
             }
-            //Get IBAN do utilizador atual
+            
             using (SqlCommand cmd = new SqlCommand("SELECT IBAN FROM bank_accounts WHERE userid = @userid", Program.db))
             {
                 cmd.Parameters.AddWithValue("@userid", Program.user.ID);
@@ -48,13 +51,13 @@ namespace Projeto2Ano
                 row["IBAN"] = Program.FormatIBAN(row["IBAN"].ToString());
             }
             
-
             dgTransferencias.DataSource = dt;
-            
-
-            
         }
-
+        /// <summary>
+        /// Efetua a transferência se o IBAN indicado for válido e o utilizador tiver saldo suficiente na conta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOption_Click(object sender, EventArgs e)
         {
             string destIBAN = tbxIBAN.Text;
@@ -116,6 +119,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Verifica se existe conteúdo na textbox e ativa o <see cref="btnOption"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxQuantia_TextChanged(object sender, EventArgs e)
         {
             string text = tbxQuantia.Text;
@@ -142,6 +150,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Limita os caracteres recebidos pela <see cref="tbxQuantia"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxQuantia_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsControl(e.KeyChar))
@@ -161,12 +174,12 @@ namespace Projeto2Ano
 
             e.Handled = true;
         }
-
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        
+        /// <summary>
+        /// Verifica se existe conteúdo na textbox e formata o conteúdo para melhor legibilidade
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxIBAN_TextChanged(object sender, EventArgs e)
         {
             if (tbxQuantia.Text.Length != 0 && tbxIBAN.Text.Length == tbxIBAN.MaxLength)
@@ -179,7 +192,15 @@ namespace Projeto2Ano
             tbxIBAN.SelectionStart = tbxIBAN.Text.Length;
         }
 
-        
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 

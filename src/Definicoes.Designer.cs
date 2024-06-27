@@ -114,6 +114,7 @@
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Definicoes";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Definições";

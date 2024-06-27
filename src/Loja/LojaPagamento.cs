@@ -2,6 +2,9 @@
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este menu dá ao utilizador a opção de pagar com o saldo da conta bancária (<see cref="BancoOpIO"/>) e através de "dinheiro" (<see cref="LojaPagamentoDinheiro"/>)
+    /// </summary>
     public partial class LojaPagamento : Form
     {
         public LojaPagamento()
@@ -26,6 +29,9 @@ namespace Projeto2Ano
 
         }
 
+        /// <summary>
+        /// Verifica quanto o utilizador pagou e conforme quanto foi pago do total mostra o form com a quantia a pagar atualizada ou uma mensagem de agradecimento
+        /// </summary>
         private void VerifyPayment()
         {
             if (Program.loja.paidQuantityMoney + Program.loja.paidQuantityBank == 0)
@@ -44,12 +50,16 @@ namespace Projeto2Ano
             }
             else if (Program.UpdateTotal() < 0)
             {
-                MessageBox.Show($"Obrigado por utilizar a loja!\nVolte Sempre!\n\nTroco Recebido: {(Program.UpdateTotal() * -1).ToString("0.00")}", "Conclusão da Compra", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show($"Obrigado por utilizar a loja!\nVolte Sempre!\n\nTroco Recebido: {(Program.UpdateTotal() * -1).ToString("0.00")}€", "Conclusão da Compra", MessageBoxButtons.OK, MessageBoxIcon.None);
                 this.DialogResult = DialogResult.OK;
                 Close();
             }
         }
-
+        /// <summary>
+        /// Abre <see cref="BancoOpIO"/> em modo pagamento
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPayBank_Click(object sender, EventArgs e)
         {
             BancoOpIO bancoOpIO = new BancoOpIO(false, true);
@@ -59,7 +69,11 @@ namespace Projeto2Ano
             };
             bancoOpIO.ShowDialog();
         }
-
+        /// <summary>
+        /// Abre <see cref="LojaPagamentoDinheiro"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPayMoney_Click(object sender, EventArgs e)
         {
             LojaPagamentoDinheiro lojaPagamentoDinheiro = new LojaPagamentoDinheiro();
@@ -71,6 +85,11 @@ namespace Projeto2Ano
             lojaPagamentoDinheiro.ShowDialog();
         }
 
+        /// <summary>
+        /// Fecha o Form e caso o utilizador tenha pago alguma quantia, ela é retornada com uma messagebox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (Program.loja.paidQuantityBank + Program.loja.paidQuantityMoney > 0)

@@ -3,6 +3,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form é exclusivo ao administrador e permite ver e alterar os dados das contas bancárias
+    /// </summary>
     public partial class BancoAdmin : Form
     {
         private DataTable dtTransacoes;
@@ -18,7 +21,9 @@ namespace Projeto2Ano
 
             LoadUsernames();
         }
-
+        /// <summary>
+        /// Carrega os nomes de utilizador com conta bancária em <see cref="cbxContaSel"/>
+        /// </summary>
         private void LoadUsernames()
         {
             Program.dt = new DataTable();
@@ -46,7 +51,10 @@ namespace Projeto2Ano
             cbxContaSel.DataSource = Program.dt;
             cbxContaSel.SelectedIndex = 0;
         }
-
+        /// <summary>
+        /// Carrega as transações em <see cref="dgTransacoes"/>
+        /// </summary>
+        /// <param name="userId"></param>
         private void LoadTransactions(int userId)
         {
             dtTransacoes = new DataTable();
@@ -86,7 +94,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Mostra as informações da conta selecionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxContaSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxContaSel.SelectedIndex > 0)
@@ -101,7 +113,11 @@ namespace Projeto2Ano
                 pDefinicoes.Visible = false;
             }
         }
-
+        /// <summary>
+        /// Guarda as alterações da <see cref="dgTransacoes"/> na base de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             ContaConfirmarMessageBox confirmar = new ContaConfirmarMessageBox();
@@ -122,7 +138,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Apaga a transação selecionada em <see cref="dgTransacoes"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDeleteTransaction_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgTransacoes.SelectedRows)
@@ -130,7 +150,11 @@ namespace Projeto2Ano
                 dgTransacoes.Rows.Remove(row);
             }
         }
-
+        /// <summary>
+        /// Insere uma nova transação em <see cref="dgTransacoes"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInsertTransaction_Click(object sender, EventArgs e)
         {
             if (cbxContaSel.SelectedIndex > 0)
@@ -140,7 +164,11 @@ namespace Projeto2Ano
                 dtTransacoes.Rows.Add(newRow);
             }
         }
-
+        /// <summary>
+        /// Altera o PIN da conta selecionada em <see cref="cbxContaSel"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlterarPIN_Click(object sender, EventArgs e)
         {
             if (cbxContaSel.SelectedIndex > 0)
@@ -172,6 +200,11 @@ namespace Projeto2Ano
                 }
             }
         }
+        /// <summary>
+        /// Seleciona a linha toda ao clicar numa célula
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgTransacoes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -179,7 +212,11 @@ namespace Projeto2Ano
                 dgTransacoes.Rows[e.RowIndex].Selected = true;
             }
         }
-
+        /// <summary>
+        /// Apaga a transação selecionada em <see cref="dgTransacoes"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (cbxContaSel.SelectedIndex > 0)
@@ -215,13 +252,19 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Alterna a visibilidade dos PINS
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkShowPIN_CheckedChanged(object sender, EventArgs e)
         {
             tbxPIN.UseSystemPasswordChar = !chkShowPIN.Checked;
             tbxRepPIN.UseSystemPasswordChar = !chkShowPIN.Checked;
         }
-
+        /// <summary>
+        /// Verifica se as textboxes cumprem os requisitos
+        /// </summary>
         private void VerifyTxtbxs()
         {
             if (tbxPIN.Text.Length != 4 || tbxRepPIN.Text.Length != 4)
@@ -240,27 +283,47 @@ namespace Projeto2Ano
                 btnAlterarPIN.Enabled = true;
             }
         }
-
+        /// <summary>
+        /// Altera o foco para a textbox referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbltbxPIN_Click(object sender, EventArgs e)
         {
             tbxPIN.Focus();
         }
-
+        /// <summary>
+        /// Altera o foco para a textbox referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbltbxRepPIN_Click(object sender, EventArgs e)
         {
             tbxRepPIN.Focus();
         }
-
+        /// <summary>
+        /// Chama <see cref="VerifyTxtbxs"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxPIN_TextChanged(object sender, EventArgs e)
         {
             VerifyTxtbxs();
         }
-
+        /// <summary>
+        /// Chama <see cref="VerifyTxtbxs"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxRepPIN_TextChanged(object sender, EventArgs e)
         {
             VerifyTxtbxs();
         }
-
+        /// <summary>
+        /// Limita os caracteres recebidos pela <see cref="tbxPIN"/> e pela <see cref="tbxRepPIN"/> apenas a números
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxPIN_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -268,7 +331,11 @@ namespace Projeto2Ano
                 e.Handled = true;
             }
         }
-
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();

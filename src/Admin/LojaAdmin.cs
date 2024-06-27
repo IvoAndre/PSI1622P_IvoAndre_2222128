@@ -3,6 +3,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form é exclusivo ao administrador e permite-o ver e alterar os valores das categorias e dos produtos da loja
+    /// </summary>
     public partial class LojaAdmin : Form
     {
         private DataTable dtProdutos;
@@ -18,7 +21,9 @@ namespace Projeto2Ano
 
             LoadCategories();
         }
-
+        /// <summary>
+        /// Carrega as categorias na <see cref="cbxCatSel"/>
+        /// </summary>
         private void LoadCategories()
         {
             Program.dt = new DataTable();
@@ -46,7 +51,10 @@ namespace Projeto2Ano
             cbxCatSel.DataSource = Program.dt;
             cbxCatSel.SelectedIndex = 0;
         }
-
+        /// <summary>
+        /// Carregas os produtos da categoria selecionada na <see cref="dgProdutos"/>
+        /// </summary>
+        /// <param name="catId"></param>
         private void LoadProducts(int catId)
         {
             dtProdutos = new DataTable();
@@ -109,7 +117,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Mostra <see cref="pDefinicoes"/> e chama <see cref="LoadCategories"/> se for selecionada uma categoria 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxCatSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxCatSel.SelectedIndex > 0)
@@ -130,7 +142,11 @@ namespace Projeto2Ano
                 btnDelete.Enabled = false;
             }
         }
-
+        /// <summary>
+        /// Guarda as alterações efetuadas em <see cref="dgProdutos"/> na base de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             ContaConfirmarMessageBox confirmar = new ContaConfirmarMessageBox();
@@ -151,7 +167,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Apaga o produto selecionado na <see cref="dgProdutos"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgProdutos.SelectedRows)
@@ -159,7 +179,11 @@ namespace Projeto2Ano
                 dgProdutos.Rows.Remove(row);
             }
         }
-
+        /// <summary>
+        /// Insere um novo produto na <see cref="dgProdutos"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInsertProduct_Click(object sender, EventArgs e)
         {
             if (cbxCatSel.SelectedIndex > 0)
@@ -171,7 +195,11 @@ namespace Projeto2Ano
                 dtProdutos.Rows.Add(newRow);
             }
         }
-
+        /// <summary>
+        /// Apaga a categoria selecionada em <see cref="cbxCatSel"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (cbxCatSel.SelectedIndex > 0)
@@ -203,20 +231,12 @@ namespace Projeto2Ano
                 }
             }
         }
-
-        private void tbxPIN_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        
+        /// <summary>
+        /// Verifica se já existe uma categoria com o nome inserido se sim mostra um aviso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxNewCat_TextChanged(object sender, EventArgs e)
         {
             if (tbxNewCat.Text.Length == 0)
@@ -246,12 +266,20 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Altera o foco para a textbox referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lblNewCat_Click(object sender, EventArgs e)
         {
             tbxNewCat.Focus();
         }
-
+        /// <summary>
+        /// Cria a categoria com o nome inserido em <see cref="tbxNewCat"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCreateCat_Click(object sender, EventArgs e)
         {
             using (SqlCommand cmd = new SqlCommand("INSERT INTO [shop_categories] (name) VALUES (@name)", Program.db))
@@ -263,7 +291,11 @@ namespace Projeto2Ano
                 LoadCategories();
             }
         }
-
+        /// <summary>
+        /// Seleciona a linha toda ao clicar numa célula e abre o diálogo de seleção de imagem caso uma célula de imagem seja clicada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -309,7 +341,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Mostra as imagens corretamente na <see cref="dgProdutos"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgProdutos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
             if (e.ColumnIndex == dgProdutos.Columns["Imagem"].Index && e.RowIndex >= 0)
@@ -329,12 +365,20 @@ namespace Projeto2Ano
                 e.Handled = true;
             }
         }
-
+        /// <summary>
+        /// Altera o tamanho de <see cref="dgProdutos"/> conforme o tamanho de <see cref="pDefinicoes"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pDefinicoes_SizeChanged(object sender, EventArgs e)
         {
             dgProdutos.MinimumSize = new Size(pDefinicoes.Width, pDefinicoes.Height - btnSave.Height);
         }
-
+        /// <summary>
+        /// Altera o nome da categoria selecionada em <see cref="cbxCatSel"/> com o nome inserido em <see cref="tbxAltCatName"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAltCatName_Click(object sender, EventArgs e)
         {
             bool catExists = false;
@@ -364,7 +408,11 @@ namespace Projeto2Ano
 
 
         }
-
+        /// <summary>
+        /// Verifica se já existe uma categoria com o nome inserido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxAltCatName_TextChanged(object sender, EventArgs e)
         {
             if (tbxAltCatName.Text.Length == 0)
@@ -394,6 +442,16 @@ namespace Projeto2Ano
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

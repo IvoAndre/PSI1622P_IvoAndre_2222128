@@ -3,6 +3,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form é exclusivo ao administrador e permite alterar os dados das contas dos utilizadores
+    /// </summary>
     public partial class ContaDefinicoesAdmin : Form
     {
         private string username;
@@ -17,7 +20,9 @@ namespace Projeto2Ano
             }
             LoadUsernames();
         }
-
+        /// <summary>
+        /// Carrega os nomes de utilizador na <see cref="cbxContaSel"/>
+        /// </summary>
         private void LoadUsernames()
         {
             Program.dt = new DataTable();
@@ -46,7 +51,11 @@ namespace Projeto2Ano
             cbxContaSel.DataSource = Program.dt;
             cbxContaSel.SelectedIndex = 0;
         }
-
+        /// <summary>
+        /// Mostra os dados da conta selecionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxContaSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxContaSel.SelectedIndex == -1 || cbxContaSel.SelectedValue.ToString() == "Nenhuma Conta Selecionada")
@@ -90,8 +99,12 @@ namespace Projeto2Ano
             }
         }
 
-        
 
+        /// <summary>
+        /// Altera o nome da conta selecionada em <see cref="cbxContaSel"/> com o nome inserido em <see cref="tbxName"/> após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlterarName_Click(object sender, EventArgs e)
         {
             if (tbxName.Text.Length != 0)
@@ -109,7 +122,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Altera o nome de utilizador da conta selecionada em <see cref="cbxContaSel"/> com o nome de utilizador inserido em <see cref="tbxUsername"/> após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlterarUsername_Click(object sender, EventArgs e)
         {
             if (tbxUsername.Text.Length != 0)
@@ -136,7 +153,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Altera a palavra-passe da conta selecionada em <see cref="cbxContaSel"/> com a palavra-passe inserida em <see cref="tbxPass"/> após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlterarPassword_Click(object sender, EventArgs e)
         {
             if (tbxPass.Text.Length != 0 && tbxRepPass.Text.Length != 0)
@@ -158,6 +179,11 @@ namespace Projeto2Ano
                 }
             }
         }
+        /// <summary>
+        /// Alterna a visibilidade das palavras-passe das <see cref="tbxPass"/> e <see cref="tbxRepPass"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass.Checked)
@@ -172,7 +198,11 @@ namespace Projeto2Ano
             }
         }
 
-
+        /// <summary>
+        /// Apaga a conta selecionada em <see cref="cbxContaSel"/> após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             ContaConfirmarMessageBox confirmar = new ContaConfirmarMessageBox();
@@ -200,14 +230,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
-
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-
+        /// <summary>
+        /// Altera o valor indicado com o novo valor
+        /// </summary>
+        /// <param name="valueName">Valor a alterar</param>
+        /// <param name="value">Novo Valor</param>
         private void UpdateDatabaseValue(string valueName, string value)
         {
             try
@@ -228,6 +255,14 @@ namespace Projeto2Ano
             }
         }
 
-       
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

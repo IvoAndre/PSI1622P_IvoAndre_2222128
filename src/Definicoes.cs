@@ -1,5 +1,8 @@
 ﻿namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form mostra as definições gerais do programa, por agora apenas contém a seleção do tema
+    /// </summary>
     public partial class Definicoes : Form
     {
         public Definicoes()
@@ -12,7 +15,7 @@
                 Directory.CreateDirectory(Program.configFolder);
             }
 
-            //Verificar se themeFile existe e se sim mostrar a opção selecionada
+            //Verificar se themeFile existe e se sim mostrar o tema guardado
             if (File.Exists(Program.themeFilePath))
             {
                 string theme = File.ReadAllText(Program.themeFilePath);
@@ -38,7 +41,15 @@
 
         }
 
-
+        /// <summary>
+        /// Altera o tema do programa segundo a opção selecionada<br/>
+        /// <list type="number"> 
+        ///     <item>Claro</item>
+        ///     <item>Escuro</item>
+        /// </list>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch(cbxTheme.SelectedIndex)
@@ -65,18 +76,32 @@
             Program.DetectTheme(this);
             Refresh();
         }
+        
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        /// <summary>
+        /// Restaura as predefinições, apaga o ficheiro de tema guardado e fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
-            Directory.Delete(Program.configFolder, true);
+            if (File.Exists(Program.configFolder + Program.themeFilePath))
+                {
+                File.Delete(Program.configFolder + Program.themeFilePath);
+                }
             Program.backcolor = Color.White;
             Program.forecolor = Color.Black;
             Program.altBackcolor = Color.LightGray;
+            Close();
+        }
+
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

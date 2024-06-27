@@ -1,17 +1,23 @@
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este Form mostra uma barra de loading durante 5 segundos e abre <see cref="MenuPrincipal"/>
+    /// </summary>
     public partial class Loading : Form
     {
-
 
         public Loading()
         {
             InitializeComponent();
             ClientSize = new Size(320, 45);
             Program.DetectTheme(this);
-            KeyDown += Loading_KeyDown;
         }
         private int pBarIncrease = 0;
+        /// <summary>
+        /// Recebe as teclas Shift+S para pular o loading
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Loading_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.S && e.Modifiers == Keys.Control)
@@ -22,7 +28,11 @@ namespace Projeto2Ano
         }
 
 
-
+        /// <summary>
+        /// A cada tick do <see cref="Timer"/> (1 segundo) esta função é executada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Timer_Tick(object sender, EventArgs e)
         {
             if (pBar.Maximum - pBar.Value > 20 )

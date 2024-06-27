@@ -2,6 +2,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Menu Principal do Programa: O utilizador pode ir às <see cref="Definicoes"/>, <see cref="ContaDefinicoes"/>, <see cref="BancoInicial"/> e <see cref="LojaPrincipal"/>
+    /// </summary>
     public partial class MenuPrincipal : Form
     {
 
@@ -15,7 +18,11 @@ namespace Projeto2Ano
                 Program.db.Open();
             }
         }
-
+        /// <summary>
+        /// Abre <see cref="Definicoes"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void menuDefinicoes_Click(object sender, EventArgs e)
         {
             Hide();
@@ -28,6 +35,12 @@ namespace Projeto2Ano
             definicoes.ShowDialog();
         }
 
+        /// <summary>
+        /// Abre <see cref="ContaDefinicoes"/> se for utilizador<br/>
+        /// Abre <see cref="ContaDefinicoesAdmin"/> se <see cref="Program.adminMode"/> = true
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void menuConta_Click(object sender, EventArgs e)
         {
             if (Program.adminMode)
@@ -63,6 +76,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Abre <see cref="BancoInicial"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBank_Click(object sender, EventArgs e)
         {
             Hide();
@@ -71,6 +89,12 @@ namespace Projeto2Ano
             bancoInicial.ShowDialog();
         }
 
+        /// <summary>
+        /// Abre <see cref="LojaPrincipal"/> se for utilizador<br/>
+        /// Abre <see cref="LojaAdmin"/> se <see cref="Program.adminMode"/> = true
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnShop_Click(object sender, EventArgs e)
         {
             Hide();
@@ -95,6 +119,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();

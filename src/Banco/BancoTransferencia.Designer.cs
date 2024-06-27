@@ -112,6 +112,7 @@
             tbxQuantia.TabIndex = 3;
             tbxQuantia.TextChanged += tbxQuantia_TextChanged;
             tbxQuantia.KeyPress += tbxQuantia_KeyPress;
+            tbxQuantia.ShortcutsEnabled = false;
             // 
             // tbxIBAN
             // 

@@ -2,6 +2,9 @@
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este Form permite ao utilizador inserir a quantia a pagar em "Dinheiro"
+    /// </summary>
     public partial class LojaPagamentoDinheiro : Form
     {
         public LojaPagamentoDinheiro()
@@ -15,25 +18,31 @@ namespace Projeto2Ano
         }
 
 
-
+        /// <summary>
+        /// Caso o utilizador não insira uma quantia é pago o preço total, caso contrário é usado o valor inserido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOption_Click(object sender, EventArgs e)
         {
-
             if (tbxQuantia.Text.Length == 0)
             {
-                
-                    Program.loja.paidQuantityMoney = Program.loja.totalPrice;
-                    MessageBox.Show("Quantia paga com sucesso!\n", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+                Program.loja.paidQuantityMoney = Program.loja.totalPrice;
+                MessageBox.Show("Quantia paga com sucesso!\n", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
             else if (tbxQuantia.Text.Length != 0 && double.Parse(tbxQuantia.Text) != 0)
             {
-                    Program.loja.paidQuantityMoney += double.Parse(tbxQuantia.Text);
-                    MessageBox.Show("Quantia paga com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+                Program.loja.paidQuantityMoney += double.Parse(tbxQuantia.Text);
+                MessageBox.Show("Quantia paga com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
         }
-
+        /// <summary>
+        /// Apenas permite inserir números com duas casas decimais na <see cref="tbxQuantia"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxQuantia_TextChanged(object sender, EventArgs e)
         {
             string text = tbxQuantia.Text;
@@ -62,7 +71,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// <inheritdoc cref="tbxQuantia_TextChanged"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxQuantia_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -87,6 +100,11 @@ namespace Projeto2Ano
             e.Handled = true;
         }
 
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();

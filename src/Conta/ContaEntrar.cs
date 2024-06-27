@@ -3,6 +3,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form permite ao utilizador inserir o seu nome de utilizador e palavra-passe para iniciar sessão no programa
+    /// </summary>
     public partial class ContaEntrar : Form
     {
 
@@ -17,24 +20,12 @@ namespace Projeto2Ano
                 Program.db.Open();
             }
 
-            //KeyDown += ContaEntrar_KeyDown;
         }
+     
 
-        /*private void ContaEntrar_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (btnEntrar.Enabled)
-                {
-                    btnEntrar.Select();
-                }
-                e.Handled = true;
-            }
-        }*/
-
-        
-
-        
+        /// <summary>
+        /// Verifica se todos os campos estão preenchidos, caso contrário mostra um aviso e desabilita o <see cref="btnEntrar"/>
+        /// </summary>
         private void VerifyTxtbxs()
         {
             if ( tbxUsername.Text.Length == 0 || tbxPass.Text.Length == 0 )
@@ -49,29 +40,51 @@ namespace Projeto2Ano
             }
         }
 
-        //lblFocustbx
-
+        
+        /// <summary>
+        /// Altera o foco para a textbox referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbltbxUsername_Click(object sender, EventArgs e)
         {
             tbxUsername.Focus();
         }
 
+        /// <summary>
+        /// Altera o foco para a textbox referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbltbxPass_Click(object sender, EventArgs e)
         {
             tbxPass.Focus();
         }
 
-        //verifytxbxs when textchanges
+        /// <summary>
+        /// Chama <see cref="VerifyTxtbxs"/> para verificação dos requisitos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxUsername_TextChanged(object sender, EventArgs e)
         {
             VerifyTxtbxs();
         }
-
+        /// <summary>
+        /// Chama <see cref="VerifyTxtbxs"/> para verificação dos requisitos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxPass_TextChanged(object sender, EventArgs e)
         {
             VerifyTxtbxs();
         }
 
+        /// <summary>
+        /// Verifica se o nome de utilizador e a palavra-passe coincidem com os guardados na base de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string hash = "";
@@ -154,6 +167,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Alterna a visibilidade da palavra-passe
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if(chkShowPass.Checked)

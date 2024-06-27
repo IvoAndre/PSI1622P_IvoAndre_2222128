@@ -3,6 +3,14 @@
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form tem três modos:
+    /// <list type="number">
+    /// <item>Depósito</item>
+    /// <item>Levantamento</item>
+    /// <item>Pagamento</item>
+    /// </list>
+    /// </summary>
     public partial class BancoOpIO : Form
     {
         private bool AddMode;
@@ -40,17 +48,20 @@ namespace Projeto2Ano
         }
 
 
-
+        /// <summary>
+        /// Executa a operação dependendo do modo do form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOption_Click(object sender, EventArgs e)
         {
-
             if (AddMode)
             {
                 if (double.Parse(tbxQuantia.Text) <= 10000)
                 {
                     if (Program.AdicionarFundos(Program.user.ID, "Depósito de Fundos", double.Parse(tbxQuantia.Text)) == DialogResult.OK)
                     {
-                        MessageBox.Show("Depósito efetuado com sucesso!\n Os fundos aparecerão brevemente na sua conta.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Depósito efetuado com sucesso!\nOs fundos aparecerão brevemente na sua conta.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Close();
                     }
                 }
@@ -86,7 +97,7 @@ namespace Projeto2Ano
                     }
                     else
                     {
-                        MessageBox.Show("Pagamento não efetuado!\nA quantia a levantar não pode exceder o saldo da sua conta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Pagamento não efetuado!\nA quantia a pagar não pode exceder o saldo da sua conta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -115,7 +126,11 @@ namespace Projeto2Ano
             }
             lblSaldo.Text = $"Saldo Atual: {Program.user.Saldo}€";
         }
-
+        /// <summary>
+        /// Verifica se <see cref="tbxQuantia"/> cumpre os requisitos e limita o texto a duas casas decimais
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxQuantia_TextChanged(object sender, EventArgs e)
         {
             string text = tbxQuantia.Text;
@@ -152,7 +167,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Limita os caracteres recebidos por <see cref="tbxQuantia"/> apenas a números e vírgulas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxQuantia_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -176,7 +195,11 @@ namespace Projeto2Ano
 
             e.Handled = true;
         }
-
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();

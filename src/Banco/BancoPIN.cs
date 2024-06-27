@@ -3,6 +3,13 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form tem dois modos:
+    /// <list type="number">
+    /// <item>Criação de Conta: Permite ao utilizador inserir o PIN que deseja e cria uma nova conta bancária</item>
+    /// <item>Alteração de PIN: Permite ao utilizador alterar o PIN atual por um PIN novo e dá a opção de apagar a conta</item>
+    /// </list>
+    /// </summary>
     public partial class BancoPIN : Form
     {
         bool IsNew = false;
@@ -29,12 +36,9 @@ namespace Projeto2Ano
             }
 
         }
-
-
-
-
-
-
+        /// <summary>
+        /// Verifica se as textboxes cumprem todos os requisitos
+        /// </summary>
         private void VerifyTxtbxs()
         {
             if (tbxPIN.Text.Length != 4 || tbxRepPIN.Text.Length != 4)
@@ -54,30 +58,48 @@ namespace Projeto2Ano
             }
         }
 
-        //lblFocustbx
-
+        /// <summary>
+        /// Altera o foco para a textbox referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbltbxPIN_Click(object sender, EventArgs e)
         {
             tbxPIN.Focus();
         }
-
+        /// <summary>
+        /// Altera o foco para a textbox referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbltbxRepPIN_Click(object sender, EventArgs e)
         {
             tbxRepPIN.Focus();
         }
 
-        //verifytxbxs when textchanges
-
+        /// <summary>
+        /// Chama <see cref="VerifyTxtbxs"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxPIN_TextChanged(object sender, EventArgs e)
         {
             VerifyTxtbxs();
         }
-
+        /// <summary>
+        /// Chama <see cref="VerifyTxtbxs"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxRepPIN_TextChanged(object sender, EventArgs e)
         {
             VerifyTxtbxs();
         }
-
+        /// <summary>
+        /// Limita os caracteres que podem ser inseridos na <see cref="tbxPIN"/> e <see cref="tbxRepPIN"/> para apenas números
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxPIN_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -85,7 +107,15 @@ namespace Projeto2Ano
                 e.Handled = true;
             }
         }
-
+        /// <summary>
+        /// Executa a operação dependendo do modo do form
+        /// <list type="number">
+        /// <item>Cria uma Conta</item>
+        /// <item>Altera o PIN atual</item>
+        /// </list>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOption_Click(object sender, EventArgs e)
         {
             if (IsNew)
@@ -147,13 +177,20 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Alterna a visibilidade dos PINs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkShowPIN_CheckedChanged(object sender, EventArgs e)
         {
             tbxPIN.UseSystemPasswordChar = !chkShowPIN.Checked;
             tbxRepPIN.UseSystemPasswordChar = !chkShowPIN.Checked;
         }
-
+        /// <summary>
+        /// Gera um IBAN único e aleatório
+        /// </summary>
+        /// <returns></returns>
         private static string GenerateUniqueIban()
         {
             string iban;
@@ -166,7 +203,11 @@ namespace Projeto2Ano
             } while (!IsIBANUnique(iban));
             return iban;
         }
-
+        /// <summary>
+        /// Verifica se o IBAN indicado é único
+        /// </summary>
+        /// <param name="IBAN">IBAN a verificar</param>
+        /// <returns></returns>
         private static bool IsIBANUnique(string IBAN)
         {
             using (SqlCommand cmd = new SqlCommand())
@@ -189,7 +230,11 @@ namespace Projeto2Ano
             }
 
         }
-
+        /// <summary>
+        /// Apaga a conta bancária após confirmação com <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             ContaConfirmarMessageBox confirmar = new ContaConfirmarMessageBox();
@@ -210,7 +255,5 @@ namespace Projeto2Ano
                 }
             }
         }
-
-        
     }
 }
