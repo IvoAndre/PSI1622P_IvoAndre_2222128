@@ -116,6 +116,7 @@
             tbxQuantia.TextAlign = HorizontalAlignment.Center;
             tbxQuantia.TextChanged += tbxQuantia_TextChanged;
             tbxQuantia.KeyPress += tbxQuantia_KeyPress;
+            tbxQuantia.ShortcutsEnabled = false;
             // 
             // BancoOpIO
             // 

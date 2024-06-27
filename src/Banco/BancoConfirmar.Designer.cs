@@ -108,6 +108,7 @@
             tbxPIN.UseSystemPasswordChar = true;
             tbxPIN.TextChanged += tbxPIN_TextChanged;
             tbxPIN.KeyPress += tbxPIN_KeyPress;
+            tbxPIN.ShortcutsEnabled = false;
             // 
             // lbltbxPIN
             // 

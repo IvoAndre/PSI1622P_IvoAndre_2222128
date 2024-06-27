@@ -5,9 +5,16 @@ using System.Text;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Classe de Criptografia
+    /// </summary>
     public class Crypt
     {
-        //Fazer o hash do input e devolver uma string em base64
+        /// <summary>
+        /// Faz o hash do input e devolve o hash em base64
+        /// </summary>
+        /// <param name="input">string a fazer hash</param>
+        /// <returns>hash do input em base64</returns>
         public static string Hash(string input)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -17,7 +24,12 @@ namespace Projeto2Ano
                 return Convert.ToBase64String(hashBytes);
             }
         }
-        //Verificar se o hash do input corresponde ao hash guardado
+        /// <summary>
+        /// Verifica se o hash do input corresponde ao hash guardado
+        /// </summary>
+        /// <param name="input">String a verificar</param>
+        /// <param name="hash">Hash obtido da base de dados</param>
+        /// <returns>True se corresponder, False se não corresponder</returns>
         public static bool Verify(string input, string hash)
         {
             string inputHash = Hash(input);
@@ -25,44 +37,82 @@ namespace Projeto2Ano
         }
     }
 
+    /// <summary>
+    /// Struct utilizado para guardar as informações do utilizador com sessão iniciada
+    /// </summary>
     public struct User
     {
+        /// <summary>
+        /// ID do utilizador atual
+        /// </summary>
         public int ID { get; set; }
+        /// <summary>
+        /// Nome do utilizador atual
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Nome de utilizador do utilizador atual
+        /// </summary>
         public string Username { get; set; }
+        /// <summary>
+        /// Saldo da conta bancária do utilizador atual, se esta existir
+        /// </summary>
         public string Saldo { get; set; }
     }
 
+    /// <summary>
+    /// Struct utilizado para guardar as informações necessárias para o funcionamento dos forms Loja
+    /// </summary>
     public struct Loja
     {
+        /// <summary>
+        /// Este dicionário guarda as quantidades dos produtos no carrinho <br/><idcategoria,<idproduto,quantidade>>
+        /// </summary>
         public Dictionary<int, Dictionary<int, int>> ProductQuantity;
-        public int numberOfCategories;
-        public int maxProductsPerCategory;
-        public double totalPrice;
-        public double paidQuantityMoney;
+        /// <summary>
+        /// Preço total
+        /// </summary>
+        public double totalPrice; 
+        /// <summary>
+        /// Quantia paga em "Dinheiro"
+        /// </summary>
+        public double paidQuantityMoney; 
+        /// <summary>
+        /// Quantia paga pela conta bancária
+        /// </summary>
         public double paidQuantityBank;
     }
 
     static class Program
     {
+        /// <summary>
+        /// <inheritdoc cref="User"/>
+        /// </summary>
         public static User user = new();
+
+        /// <summary>
+        /// <inheritdoc cref="Loja"/>
+        /// </summary>
         public static Loja loja = new();
+        
+        /// <summary>
+        /// True se o utilizador atual é administrador<br/>False se o utilizador atual não é administrador
+        /// </summary>
         public static bool adminMode = false;
 
-        //Theme Colors
+        //Cores de tema padrão
         public static Color backcolor = Color.White;
         public static Color forecolor = Color.Black;
         public static Color altBackcolor = Color.LightGray;
 
-        //File Paths
+        //Diretórios usados para guardar as configs e o tema selecionado
         public const string configFolder = "config";
-
         public const string themeFilePath = configFolder + @"\theme";
 
+        //Componentes para manipulação de dados da base de dados usados por todo o programa
         //SqlConnection
         private static string _connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=Projeto_2_Ano;Trusted_Connection=True;TrustServerCertificate=True";
         public static SqlConnection db = new SqlConnection(_connectionString);
-
         //DataReader
         public static SqlDataReader dr;
         //DataTable
@@ -70,19 +120,19 @@ namespace Projeto2Ano
         //DataAdapter
         public static SqlDataAdapter da;
 
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+
+
+        
         [STAThread]
         static void Main()
         {
-            //Criar Base de dados se nao existir
+            //Criar Base de dados se não existir
             CreateDatabase();
             CreateTables();
             CreateTrigger();
             InsertProducts();
 
-            //verificar se a base de dados está disponivel
+            //Verificar se a base de dados está disponivel
             try
             {
                 db.Open();
@@ -97,7 +147,7 @@ namespace Projeto2Ano
                 db.Close();
             }
 
-            //aplicar tema se existir
+            //Aplicar tema guardado se existir
             if (File.Exists(themeFilePath))
             {
                 switch (File.ReadAllText(themeFilePath))
@@ -129,6 +179,10 @@ namespace Projeto2Ano
         /// BANCO ///
         /////////////
 
+        ///<summary>
+        ///Obter o saldo bancário de determnado utilizador
+        ///</summary>
+        ///<param name="userid">ID de utilizador a obter o saldo</param>
         public static void GetSaldo(int userid)
         {
             string Saldo = "";
@@ -153,6 +207,13 @@ namespace Projeto2Ano
             user.Saldo = string.Format("{0:N2}", Saldo);
         }
 
+        /// <summary>
+        /// Adição de fundos com registo da transação
+        /// </summary>
+        /// <param name="userId">ID do utilizador a adicionar fundos</param>
+        /// <param name="description">Descritivo da transação</param>
+        /// <param name="amount">Quantia a adicionar</param>
+        /// <returns></returns>
         public static DialogResult AdicionarFundos(int userId, string description, double amount)
         {
             if (amount > 0)
@@ -202,6 +263,16 @@ namespace Projeto2Ano
             return DialogResult.Abort;
         }
 
+        /// <summary>
+        /// Remoção de fundos com registo de transação
+        /// </summary>
+        /// <param name="userId">ID do utilizador a remover fundos</param>
+        /// <param name="description">Descritivo da transação</param>
+        /// <param name="amount">Quantia a remover</param>
+        /// <param name="canGoNegative">true se o saldo final pode ser negativo, false se não.</param>
+        /// <returns>DialogResult.OK se a transação for concluída com sucesso, 
+        /// <br/> DialogResult.Abort em caso de erro e 
+        /// <br/> caso (canGoNegative = false) e o utilizador não tenha fundos suficientes.</returns>
         public static DialogResult RemoverFundos(int userId, string description, double amount, bool canGoNegative)
         {
             if (amount > 0)
@@ -257,6 +328,11 @@ namespace Projeto2Ano
 
         }
 
+        /// <summary>
+        /// Formata os IBANs para legibilidade
+        /// </summary>
+        /// <param name="iban">IBAN a formatar</param>
+        /// <returns>IBAN formatado com espaços</returns>
         public static string FormatIBAN(string iban)
         {
             iban = iban.Replace(" ", "");
@@ -272,6 +348,10 @@ namespace Projeto2Ano
         /// LOJA ///
         ////////////
 
+        /// <summary>
+        /// Atualiza o preço total do carrinho do utilizador
+        /// </summary>
+        /// <returns>Valor total em double</returns>
         public static double UpdateTotal()
         {
             loja.totalPrice = 0.0;
@@ -312,8 +392,16 @@ namespace Projeto2Ano
 
 
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Theme
+        //////////
+        // Tema //
+        //////////
+
+        
+        //Esta função é utilizada no construtor de todos os forms do programa
+        /// <summary>
+        /// Atualiza o tema do form indicado
+        /// </summary>
+        /// <param name="form">Form para atualizar o Tema</param>
         public static void DetectTheme(Form form)
         {
             form.BackColor = backcolor;
@@ -323,6 +411,10 @@ namespace Projeto2Ano
             form.Refresh();
         }
 
+        /// <summary>
+        /// Função de suporte para a função <see cref="DetectTheme(Form)"/>
+        /// </summary>
+        /// <param name="controls"></param>
         private static void UpdateControlColors(Control.ControlCollection controls)
         {
             foreach (Control control in controls)
@@ -355,9 +447,16 @@ namespace Projeto2Ano
                 }
             }
         }
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Utility
-
+        /////////////
+        // Utility //
+        /////////////
+        
+        
+        /// <summary>
+        /// Mostra a string Erro no LblErro indicado a vermelho
+        /// </summary>
+        /// <param name="LblErro">Label para mostrar o erro</param>
+        /// <param name="Erro">Descrição do Erro</param>
         public static void DisplaylblError(Control LblErro, string Erro)
         {
             LblErro.ForeColor = Color.Red;
@@ -367,6 +466,12 @@ namespace Projeto2Ano
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Verifications
+
+        /// <summary>
+        /// Verifica se o nome de utilizador indicado é único (se não existe na base de dados)
+        /// </summary>
+        /// <param name="username">Nome de utilizador a verificar</param>
+        /// <returns>True se único, False se não</returns>
         public static bool IsUsernameUnique(string username)
         {
             if (username == "Admin")
@@ -393,7 +498,10 @@ namespace Projeto2Ano
             return true;
         }
 
-
+        /// <summary>
+        /// Verifica se existem utilizadores na base de dados
+        /// </summary>
+        /// <returns>True se existirem, False se não</returns>
         public static bool VerifyUsers()
         {
             using (SqlCommand cmd = new SqlCommand())
@@ -416,6 +524,10 @@ namespace Projeto2Ano
 
         }
 
+        /// <summary>
+        /// Verifica se o utilizador atual tem uma conta bancária, usa <see cref="User.ID"/>
+        /// </summary>
+        /// <returns>True se tiver, False se não</returns>
         public static bool VerifyBankAccount()
         {
             using (SqlCommand cmd = new SqlCommand())
@@ -438,9 +550,14 @@ namespace Projeto2Ano
             }
         }
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        //Base de Dados
+        /////////////////
+        //Base de Dados//
+        /////////////////
+        
+        /// <summary>
+        /// Cria a base de dados necessária para o funcionamento do programa<br/>
+        /// Base de dados: Projeto_2_Ano
+        /// </summary>
         private static void CreateDatabase()
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Trusted_Connection=True;TrustServerCertificate=True;Integrated Security=True"))
@@ -460,6 +577,15 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Cria as tabelas necessárias para o funcionamento do programa<br/><br/>
+        /// Tabelas:<br/>
+        /// [dbo].[users] armazena o id, nome, password (em hash) e username dos utilizadores<br/>
+        /// [dbo].[bank_accounts] armazena o userid, pin (em hash), saldo e IBAN das contas bancárias. userid corresponde ao id da tabela [dbo].[users]<br/>
+        /// [dbo].[bank_transactions] armazena o id, userid, time, description, variation, finalbalance para cada transação das contas bancárias<br/>
+        /// [dbo].[shop_categories] armazena o id e o name das categorias da loja<br/>
+        /// [dbo].[shop_products] armazena o idprod, idcat, catpos, name, description, stock, price e imagepath dos produtos da loja, cat id corresponde ao id da tabela [dbo].[shop_categories]<br/>
+        /// </summary>
         private static void CreateTables()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -531,6 +657,12 @@ namespace Projeto2Ano
                 }
             }
         }
+        /// <summary>
+        /// Cria os triggers necessários para o funcionamento do programa<br/><br/>
+        /// Triggers:<br/>
+        /// trg_maintain_finalbalance na tabela [dbo].[bank_transactions] para atualizar o finalbalance de todas as transações por utilizador em caso de insert, update ou delete.
+        /// trg_OrderProductsByCategory na tabela [dbo].[shop_products] para ordenar os produtos por ordem alfabética do nome por categoria
+        /// </summary>
         private static void CreateTrigger()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -651,6 +783,9 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Insere as categorias e os produtos padrão caso não existam categorias nem produtos na base de dados
+        /// </summary>
         private static void InsertProducts()
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -659,7 +794,8 @@ namespace Projeto2Ano
                 {
                     connection.Open();
                     var insertDataQuery = @"
-            IF NOT EXISTS (SELECT 1 FROM [dbo].[shop_categories])
+            IF NOT EXISTS (SELECT 1 FROM [dbo].[shop_categories]) 
+                AND NOT EXISTS (SELECT 1 FROM [dbo].[shop_products])
             BEGIN
                 INSERT INTO [dbo].[shop_categories] ([name])
                 VALUES
@@ -668,10 +804,7 @@ namespace Projeto2Ano
                     ('Bebidas'),
                     ('Lazer'),
                     ('Produtos Automóveis');
-            END;
-
-            IF NOT EXISTS (SELECT 1 FROM [dbo].[shop_products])
-            BEGIN
+            
                 INSERT INTO [dbo].[shop_products] ([idcat], [catpos], [name], [description], [stock], [price], [imagepath])
                 VALUES
                     (1, 1, 'Calculadora gráfica Texas Instruments TI-82 STAT', 'Calculadora gráfica avançada TI-82 STAT.', 20, 189.99, 'config\\loja\\default\\texascalc.png'),

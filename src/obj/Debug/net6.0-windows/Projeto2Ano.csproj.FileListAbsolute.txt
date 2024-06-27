@@ -321,8 +321,6 @@ C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPagamento.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPrincipal.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaAdmin.resources
-C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.sourcelink.json
-C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2.C3167F93.Up2Date
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPagamentoDinheiro.resources
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\4pneus.png
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\anteroquental.png
@@ -354,3 +352,37 @@ C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\sopias.png
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\super.png
 C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\texascalc.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\4pneus.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\anteroquental.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\azuregiftcard.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\bacalhau.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\bateriacarro.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\bolastressnewtoniana.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\carnejavali.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\cocacola.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\coleteseg.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\compal.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\croquetes.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\escovalimpavidros.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\feriasdubai.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\helldivers2.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\icetea.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\irobot.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\istoematematica.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\lampadascarro.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\lgtvhd.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\luso.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\macbook.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\manga.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\mariomilk.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\marlboro.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\oleomotor.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\pimentos.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\s24.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\sopias.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\super.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\bin\Debug\net6.0-windows\config\loja\default\texascalc.png
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaAdmin.resources
+C:\Users\Ivo Andre\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.LojaPagamentoDinheiro.resources
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2Ano.sourcelink.json
+C:\Users\2222128\OneDrive - Escola Digital\Documentos\PSI\2º Ano\Modulo 16\PSI1622P_IvoAndre_2222128\src\obj\Debug\net6.0-windows\Projeto2.C3167F93.Up2Date

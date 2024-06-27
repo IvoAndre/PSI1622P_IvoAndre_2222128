@@ -3,6 +3,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form exibe os produtos colocados no carrinho pelo o utilizador em <see cref="LojaPagamento"/>
+    /// </summary>
     public partial class LojaCarrinho : Form
     {
         public LojaCarrinho()
@@ -17,6 +20,9 @@ namespace Projeto2Ano
             lblTotal.Text = "Total: " + Program.UpdateTotal().ToString("0.00") + "€";
         }
 
+        /// <summary>
+        /// Carrega os produtos guardados em <see cref="Program.loja.ProductQuantity"/> após serem ordenados por idprod em <see cref="OrderProductsById(Dictionary{int, Dictionary{int, int}})"/>
+        /// </summary>
         private void LoadCartItems()
         {
             if(Program.UpdateTotal() == 0)
@@ -233,7 +239,11 @@ namespace Projeto2Ano
             }
         }
 
-
+        /// <summary>
+        /// Lida com as mudanças de valor dos numericUpDown dos productPanels e guarda as quantias selecionadas no <see cref="Program.loja.ProductQuantity"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numericUpDownQuantity_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown numericUpDown = sender as NumericUpDown;
@@ -261,7 +271,11 @@ namespace Projeto2Ano
                 lblTotal.Text = "Total: " + Program.UpdateTotal().ToString("0.00") + "€";
             }
         }
-
+        /// <summary>
+        /// Lida com com os eventos dos btnRemove dos productPanels e remove o produto referente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRemove_Click(object sender, EventArgs e)
         {
             Button btnRemove = sender as Button;
@@ -282,13 +296,13 @@ namespace Projeto2Ano
         }
 
 
+        
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-
+        /// <summary>
+        /// Ordena os produtos do dicionário <see cref="Program.loja.ProductQuantity"/> pelos idprod dos produtos
+        /// </summary>
+        /// <param name="productQuantity">Dicionário ProductQuantity</param>
+        /// <returns></returns>
         private static Dictionary<int, Dictionary<int, int>> OrderProductsById(Dictionary<int, Dictionary<int, int>> productQuantity)
         {
             Dictionary<int, Dictionary<int, int>> orderedProductQuantity = new Dictionary<int, Dictionary<int, int>>();
@@ -304,6 +318,11 @@ namespace Projeto2Ano
             return orderedProductQuantity;
         }
 
+        /// <summary>
+        /// Abre <see cref="LojaPagamento"/> e chama <see cref="UpdateStockInDatabase"/> caso o pagamento tenha sido concluido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             LojaPagamento lojaPagamento = new LojaPagamento();
@@ -326,7 +345,11 @@ namespace Projeto2Ano
                 Close();
             }
         }
-
+        /// <summary>
+        /// Atualiza o stock do produto indicado, e remove a quantidade indicada na base de dados
+        /// </summary>
+        /// <param name="productId">ID do Produto a atualizar</param>
+        /// <param name="quantity">Quantidade a remover do stock</param>
         private void UpdateStockInDatabase(int productId, int quantity)
         {
             string sqlUpdate = "UPDATE shop_products SET stock = stock - @Quantity WHERE idprod = @ProductId";
@@ -339,5 +362,14 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Fecha o Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

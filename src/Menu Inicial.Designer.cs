@@ -146,6 +146,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
+            KeyPress += MenuInicial_KeyPress;
         }
 
         #endregion

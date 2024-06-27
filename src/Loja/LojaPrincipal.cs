@@ -3,8 +3,14 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form é o menu principal da loja aqui aparecem os produtos para o utilizador os adicionar ao carrinho
+    /// </summary>
     public partial class LojaPrincipal : Form
     {
+        /// <summary>
+        /// Mantém-se true se o form carregar corretamente, caso contrário um erro é mostrado
+        /// </summary>
         bool CouldLoad = true;
 
         public LojaPrincipal()
@@ -16,17 +22,18 @@ namespace Projeto2Ano
             {
                 Program.db.Open();
             }
+
             Program.loja.paidQuantityBank = 0;
             Program.loja.paidQuantityMoney = 0;
-            Program.loja.numberOfCategories = GetNumberOfCategories();
-            if (Program.loja.numberOfCategories == 0)
+
+            if (GetNumberOfCategories() == 0)
             {
                 MessageBox.Show("Erro: Nenhuma categoria foi encontrada.\nPede ajuda ao administrador.", "Erro Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DialogResult = DialogResult.Abort;
                 Close();
                 return;
             }
-
+            
             Program.loja.ProductQuantity = new Dictionary<int, Dictionary<int, int>>();
             LoadCategories();
             cbxCatSel.SelectedIndex = 0;
@@ -40,6 +47,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Verifica se o form carregou corretamente, se não é fechado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LojaPrincipal_Load(object sender, EventArgs e)
         {
             if (!CouldLoad)
@@ -48,6 +60,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Abre <see cref="LojaCarrinho"></see>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCart_Click(object sender, EventArgs e)
         {
             LojaCarrinho lojaCarrinho = new LojaCarrinho();
@@ -62,7 +79,11 @@ namespace Projeto2Ano
                 Close();
             }
         }
-
+        /// <summary>
+        /// Fecha o Form, se o utilizador tiver itens no seu carrinho é mostrado um aviso.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (Program.loja.ProductQuantity.Any(outerKvp => outerKvp.Value.Any(innerKvp => innerKvp.Value >0 ))) 
@@ -79,7 +100,9 @@ namespace Projeto2Ano
             }
             
         }
-
+        /// <summary>
+        /// Carrega as categorias da loja guardadas na base de dados na combobox <see cref="cbxCatSel"/>
+        /// </summary>
         private void LoadCategories()
         {
             try
@@ -110,7 +133,10 @@ namespace Projeto2Ano
                 CouldLoad = false;
             }
         }
-
+        /// <summary>
+        /// Carrega os produtos da categoria selecionada na <see cref="cbxCatSel"/> em panels usando <see cref="AddProductToFlowLayout(int, string, string, double, int, string, int, int)"/> no <see cref="flpProductsList"/>
+        /// </summary>
+        /// <param name="categoryId"></param>
         private void LoadProducts(int categoryId)
         {
             flpProductsList.Controls.Clear();
@@ -148,6 +174,10 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Obtém o número de categorias existentes na base de dados
+        /// </summary>
+        /// <returns>O número de categorias existentes na base de dados</returns>
         private int GetNumberOfCategories()
         {
             int numberOfCategories = 0;
@@ -167,6 +197,17 @@ namespace Projeto2Ano
             return numberOfCategories;
         }
 
+        /// <summary>
+        /// Adiciona um productPanel a <see cref="flpProductsList"/>
+        /// </summary>
+        /// <param name="productId">ID do Produto</param>
+        /// <param name="name">Nome do Produto</param>
+        /// <param name="description">Descrição do Produto</param>
+        /// <param name="price">Preço do Produto</param>
+        /// <param name="stock">Stock do Produto</param>
+        /// <param name="imagePath">Caminho da Imagem do Produto</param>
+        /// <param name="categoryId">ID da Categoria</param>
+        /// <param name="productPosition">Posição do Produto</param>
         private void AddProductToFlowLayout(int productId,string name, string description, double price, int stock, string imagePath, int categoryId, int productPosition)
         {
             Panel productPanel = new Panel
@@ -258,7 +299,11 @@ namespace Projeto2Ano
             flpProductsList.Controls.Add(productPanel);
         }
 
-
+        /// <summary>
+        /// Altera os produtos mostrados conforme a seleção na <see cref="cbxCatSel"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxCatSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxCatSel.SelectedIndex != 0)
@@ -272,6 +317,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Lida com os controlos numericUpDown dos produtos para guardar a quantidade escolhida dos produtos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             if (sender is NumericUpDown numericUpDown && numericUpDown.Tag is Tuple<int, int> identifiers)
@@ -305,7 +355,9 @@ namespace Projeto2Ano
     }
 
 
-
+    /// <summary>
+    /// É a classe usada para os itens da <see cref="LojaPrincipal.cbxCatSel"/>
+    /// </summary>
     public class ComboBoxItem
     {
         public string Text { get; set; }

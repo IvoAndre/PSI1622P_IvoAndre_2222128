@@ -3,6 +3,9 @@ using System.Data;
 
 namespace Projeto2Ano
 {
+    /// <summary>
+    /// Este form permite ao utilizador alterar os dados da sua conta
+    /// </summary>
     public partial class ContaDefinicoes : Form
     {
         private bool PasswordAltered = false;
@@ -26,7 +29,11 @@ namespace Projeto2Ano
         }
 
         
-
+        /// <summary>
+        /// Altera o nome da conta após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlterarName_Click(object sender, EventArgs e)
         {
             if (tbxName.Text.Length != 0)
@@ -44,7 +51,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Altera o nome de utilizador da conta após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlterarUsername_Click(object sender, EventArgs e)
         {
             if (tbxUsername.Text.Length != 0)
@@ -70,7 +81,11 @@ namespace Projeto2Ano
                 }
             }
         }
-
+        /// <summary>
+        /// Altera a palavra-passe da conta após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlterarPassword_Click(object sender, EventArgs e)
         {
             if (tbxPass.Text.Length != 0 && tbxRepPass.Text.Length != 0)
@@ -93,6 +108,11 @@ namespace Projeto2Ano
                 }
             }
         }
+        /// <summary>
+        /// Alterna a visibilidade das palavras-passes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass.Checked)
@@ -107,7 +127,11 @@ namespace Projeto2Ano
             }
         }
 
-
+        /// <summary>
+        /// Apaga a conta após confirmação em <see cref="ContaConfirmarMessageBox"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             ContaConfirmarMessageBox confirmar = new ContaConfirmarMessageBox();
@@ -129,6 +153,11 @@ namespace Projeto2Ano
             }
         }
 
+        /// <summary>
+        /// Fecha o form e devolve um resultado dependendo se a palavra-passe foi alterada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReturn_Click(object sender, EventArgs e)
         {
             if (PasswordAltered)
@@ -143,7 +172,11 @@ namespace Projeto2Ano
             Close();
         }
 
-
+        /// <summary>
+        /// Atualiza o valor indicado na base de dados com o valor dado
+        /// </summary>
+        /// <param name="valueName">Nome do valor a alterar</param>
+        /// <param name="value">Novo Valor</param>
         private void UpdateDatabaseValue(string valueName, string value)
         {
             try
