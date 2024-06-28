@@ -1,4 +1,6 @@
 # BankStore - Integration
+<img src="src/resc/LOGO%20PROJETO.png" alt="Logo do Projeto" width="250" />
+
 
 ## Índice
 
